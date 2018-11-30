@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth", "RentACloth\RentACloth.csproj", "{C1E9092D-24D6-4610-BABF-9875CA3D4B74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth.Data", "RentACloth.Data\RentACloth.Data.csproj", "{5532EF45-994F-424B-A8A3-1AEF95075CA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1E9092D-24D6-4610-BABF-9875CA3D4B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E9092D-24D6-4610-BABF-9875CA3D4B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E9092D-24D6-4610-BABF-9875CA3D4B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E9092D-24D6-4610-BABF-9875CA3D4B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3C8FB31-1D60-46DE-804F-668F7F39837A}
+	EndGlobalSection
+EndGlobal
