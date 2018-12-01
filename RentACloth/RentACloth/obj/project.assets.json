@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "AutoMapper/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4630,10 +4643,40 @@
         "runtime": {
           "bin/placeholder/RentACloth.Data.dll": {}
         }
+      },
+      "RentACloth.Services.Mapping/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RentACloth.Services.Mapping.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RentACloth.Services.Mapping.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/8.0.0": {
+      "sha512": "kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+      "type": "package",
+      "path": "automapper/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.8.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.pdb",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "AIgEc1up4pvH8kXy+eG1x4Qfqd6piAq3yk11pveCQXWNkkYoiKdflSmcJZuWcerdMcAaoF0xC/mWGoTW4vF4Dg==",
       "type": "package",
@@ -12539,6 +12582,11 @@
       "type": "project",
       "path": "../RentACloth.Data/RentACloth.Data.csproj",
       "msbuildProject": "../RentACloth.Data/RentACloth.Data.csproj"
+    },
+    "RentACloth.Services.Mapping/1.0.0": {
+      "type": "project",
+      "path": "../RentACloth.Services.Mapping/RentACloth.Services.Mapping.csproj",
+      "msbuildProject": "../RentACloth.Services.Mapping/RentACloth.Services.Mapping.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12547,7 +12595,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.6",
-      "RentACloth.Data >= 1.0.0"
+      "RentACloth.Data >= 1.0.0",
+      "RentACloth.Services.Mapping >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12557,11 +12606,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth\\RentACloth.csproj",
-      "projectName": "RentACloth",
-      "projectPath": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth\\RentACloth.csproj",
+      "projectUniqueName": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth\\RentACloth.Web.csproj",
+      "projectName": "RentACloth.Web",
+      "projectPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth\\RentACloth.Web.csproj",
       "packagesPath": "C:\\Users\\Viktor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth\\obj\\",
+      "outputPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12580,8 +12629,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth.Data\\RentACloth.Data.csproj": {
-              "projectPath": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth.Data\\RentACloth.Data.csproj"
+            "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Data\\RentACloth.Data.csproj": {
+              "projectPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Data\\RentACloth.Data.csproj"
+            },
+            "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Services.Mapping\\RentACloth.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Services.Mapping\\RentACloth.Services.Mapping.csproj"
             }
           }
         }

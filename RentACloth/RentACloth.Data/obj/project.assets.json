@@ -3251,11 +3251,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth.Data\\RentACloth.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Data\\RentACloth.Data.csproj",
       "projectName": "RentACloth.Data",
-      "projectPath": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth.Data\\RentACloth.Data.csproj",
+      "projectPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Data\\RentACloth.Data.csproj",
       "packagesPath": "C:\\Users\\Viktor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Viktor\\Desktop\\New folder\\RentACloth.Data\\obj\\",
+      "outputPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

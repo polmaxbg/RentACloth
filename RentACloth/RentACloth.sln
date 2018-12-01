@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth", "RentACloth\RentACloth.csproj", "{C1E9092D-24D6-4610-BABF-9875CA3D4B74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Web", "RentACloth\RentACloth.Web.csproj", "{C1E9092D-24D6-4610-BABF-9875CA3D4B74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth.Data", "RentACloth.Data\RentACloth.Data.csproj", "{5532EF45-994F-424B-A8A3-1AEF95075CA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Data", "RentACloth.Data\RentACloth.Data.csproj", "{5532EF45-994F-424B-A8A3-1AEF95075CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth.Services.Mapping", "RentACloth.Services.Mapping\RentACloth.Services.Mapping.csproj", "{9D126E3F-A671-4AAC-AE51-C04A8AF7451E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5532EF45-994F-424B-A8A3-1AEF95075CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D126E3F-A671-4AAC-AE51-C04A8AF7451E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D126E3F-A671-4AAC-AE51-C04A8AF7451E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D126E3F-A671-4AAC-AE51-C04A8AF7451E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D126E3F-A671-4AAC-AE51-C04A8AF7451E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
