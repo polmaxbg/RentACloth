@@ -229,6 +229,9 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<int>("EventType");
 
                     b.Property<string>("Name");
@@ -244,6 +247,8 @@ namespace RentACloth.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.RentAClothUser", b =>
@@ -299,6 +304,51 @@ namespace RentACloth.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.Accessories", b =>
+                {
+                    b.HasBaseType("RentACloth.Data.Models.Product");
+
+
+                    b.ToTable("Accessories");
+
+                    b.HasDiscriminator().HasValue("Accessories");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.Cloth", b =>
+                {
+                    b.HasBaseType("RentACloth.Data.Models.Product");
+
+                    b.Property<int>("ClothType");
+
+                    b.Property<string>("Size");
+
+                    b.ToTable("Cloth");
+
+                    b.HasDiscriminator().HasValue("Cloth");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.Shoe", b =>
+                {
+                    b.HasBaseType("RentACloth.Data.Models.Product");
+
+                    b.Property<string>("Size")
+                        .HasColumnName("Shoe_Size");
+
+                    b.ToTable("Shoe");
+
+                    b.HasDiscriminator().HasValue("Shoe");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.Watch", b =>
+                {
+                    b.HasBaseType("RentACloth.Data.Models.Product");
+
+
+                    b.ToTable("Watch");
+
+                    b.HasDiscriminator().HasValue("Watch");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -357,7 +407,7 @@ namespace RentACloth.Data.Migrations
             modelBuilder.Entity("RentACloth.Data.Models.Order", b =>
                 {
                     b.HasOne("RentACloth.Data.Models.RentAClothUser", "User")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("UserId");
                 });
 

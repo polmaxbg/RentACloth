@@ -12,12 +12,17 @@ namespace RentACloth.Data
         }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Cloth>();
+            builder.Entity<Shoe>();
+            builder.Entity<Watch>();
+            builder.Entity<Accessories>();
+
             base.OnModelCreating(builder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RentACloth.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -225,7 +225,11 @@ namespace RentACloth.Data.Migrations
                     BrandName = table.Column<string>(nullable: true),
                     BrandId = table.Column<int>(nullable: false),
                     CategoryName = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false)
+                    CategoryId = table.Column<int>(nullable: false),
+                    Discriminator = table.Column<string>(nullable: false),
+                    Size = table.Column<string>(nullable: true),
+                    ClothType = table.Column<int>(nullable: true),
+                    Shoe_Size = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

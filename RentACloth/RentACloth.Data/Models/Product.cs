@@ -5,7 +5,7 @@ using RentACloth.Data.Models.Enums;
 
 namespace RentACloth.Data.Models
 {
-    public class Product
+    public abstract class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -2,10 +2,10 @@
 {
     public enum ClothType
     {
-        TShirt = 0,
-        Jacket = 1,
-        Jeans = 2,
-        Dress = 3,
-        Trousers = 4,
+        TShirt = 1,
+        Jacket = 2,
+        Jeans = 3,
+        Dress = 4,
+        Trousers = 5,
     }
 }

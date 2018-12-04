@@ -6,6 +6,6 @@
         Party = 1,
         NightOut = 2,
         Birthday  = 3,
-        Date = 4
+        Date = 4,
     }
 }

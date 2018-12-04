@@ -59,7 +59,7 @@ namespace RentACloth.Web
            services.AddDefaultIdentity<RentAClothUser>(
                     options =>
                     {
-                        options.Password.RequiredLength = 6;
+                        options.Password.RequiredLength = 3;
                         options.Password.RequireLowercase = false;
                         options.Password.RequireNonAlphanumeric = false;
                         options.Password.RequireUppercase = false;
