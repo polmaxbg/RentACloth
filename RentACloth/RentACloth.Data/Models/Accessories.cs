@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RentACloth.Data.Models.Enums;
 
 namespace RentACloth.Data.Models
 {
-    public class Accessories
+    public class Accessories:Product
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string BrandName { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
-        public EventType EventType { get; set; }
-
     }
 }

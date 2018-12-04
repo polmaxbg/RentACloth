@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RentACloth.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -169,43 +169,42 @@ namespace RentACloth.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Accessories",
+                name: "Orders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Date = table.Column<DateTime>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false),
+                    TotalPrice = table.Column<decimal>(nullable: false),
+                    Number = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Orders_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Brand",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
-                    BrandName = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false),
-                    CategoryId = table.Column<int>(nullable: false),
-                    EventType = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Accessories", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Accessories_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Brands",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    BrandName = table.Column<string>(nullable: true),
                     CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Brands", x => x.Id);
+                    table.PrimaryKey("PK_Brand", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Brands_Categories_CategoryId",
+                        name: "FK_Brand_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
@@ -213,81 +212,67 @@ namespace RentACloth.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Clothes",
+                name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: false),
-                    Size = table.Column<string>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    EventType = table.Column<int>(nullable: false),
                     BrandName = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false),
-                    EventType = table.Column<int>(nullable: false)
+                    BrandId = table.Column<int>(nullable: false),
+                    CategoryName = table.Column<string>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clothes", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Clothes_Categories_CategoryId",
+                        name: "FK_Products_Brand_BrandId",
+                        column: x => x.BrandId,
+                        principalTable: "Brand",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Shoes",
+                name: "OrderDetails",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false),
-                    Size = table.Column<string>(nullable: true),
-                    BrandName = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false),
-                    EventType = table.Column<int>(nullable: false)
+                    Date = table.Column<DateTime>(nullable: false),
+                    ProductName = table.Column<string>(nullable: true),
+                    ProductQuantity = table.Column<int>(nullable: false),
+                    ProductPrice = table.Column<decimal>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false),
+                    OrderId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Shoes", x => x.Id);
+                    table.PrimaryKey("PK_OrderDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Shoes_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
+                        name: "FK_OrderDetails_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OrderDetails_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Watches",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    BrandName = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false),
-                    Description = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false),
-                    EventType = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Watches", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Watches_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Accessories_CategoryId",
-                table: "Accessories",
-                column: "CategoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -329,31 +314,38 @@ namespace RentACloth.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Brands_CategoryId",
-                table: "Brands",
+                name: "IX_Brand_CategoryId",
+                table: "Brand",
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Clothes_CategoryId",
-                table: "Clothes",
-                column: "CategoryId");
+                name: "IX_OrderDetails_OrderId",
+                table: "OrderDetails",
+                column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Shoes_CategoryId",
-                table: "Shoes",
-                column: "CategoryId");
+                name: "IX_OrderDetails_ProductId",
+                table: "OrderDetails",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Watches_CategoryId",
-                table: "Watches",
+                name: "IX_Orders_UserId",
+                table: "Orders",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_BrandId",
+                table: "Products",
+                column: "BrandId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
                 column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Accessories");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -370,22 +362,22 @@ namespace RentACloth.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Brands");
-
-            migrationBuilder.DropTable(
-                name: "Clothes");
-
-            migrationBuilder.DropTable(
-                name: "Shoes");
-
-            migrationBuilder.DropTable(
-                name: "Watches");
+                name: "OrderDetails");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Brand");
 
             migrationBuilder.DropTable(
                 name: "Categories");

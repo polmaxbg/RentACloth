@@ -1,4 +1,4 @@
-﻿namespace RentACloth.Data.Models
+﻿namespace RentACloth.Data.Models.Enums
 {
     public enum EventType
     {

@@ -36,11 +36,27 @@ namespace RentACloth.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(
+            //        this.Configuration.GetConnectionString("DefaultConnection")));
+
+            //services.AddDefaultIdentity<User>(
+            //        options =>
+            //        {
+            //            options.Password.RequiredLength = 6;
+            //            options.Password.RequireLowercase = false;
+            //            options.Password.RequireNonAlphanumeric = false;
+            //            options.Password.RequireUppercase = false;
+            //            options.Password.RequireDigit = false;
+            //        }
+            //    )
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<RentAClothContext>(options =>
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<User>(
+           services.AddDefaultIdentity<RentAClothUser>(
                     options =>
                     {
                         options.Password.RequiredLength = 6;
@@ -50,8 +66,7 @@ namespace RentACloth.Web
                         options.Password.RequireDigit = false;
                     }
                 )
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
+                .AddEntityFrameworkStores<RentAClothContext>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // Application services
