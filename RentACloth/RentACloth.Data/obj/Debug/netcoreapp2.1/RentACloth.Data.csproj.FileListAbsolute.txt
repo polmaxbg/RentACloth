@@ -30,3 +30,5 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb

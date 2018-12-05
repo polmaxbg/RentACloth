@@ -839,6 +839,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "RentACloth.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/RentACloth.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RentACloth.Common.dll": {}
+        }
       }
     }
   },
@@ -3233,6 +3243,11 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "RentACloth.Common/1.0.0": {
+      "type": "project",
+      "path": "../RentACloth.Common/RentACloth.Common.csproj",
+      "msbuildProject": "../RentACloth.Common/RentACloth.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3241,7 +3256,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 2.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.4",
       "Microsoft.Extensions.Identity.Stores >= 2.1.6",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "RentACloth.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3273,7 +3289,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Common\\RentACloth.Common.csproj": {
+              "projectPath": "C:\\Users\\Viktor\\Desktop\\Project\\RentACloth\\RentACloth.Common\\RentACloth.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

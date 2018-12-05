@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RentACloth.Common;
 using RentACloth.Data;
 using RentACloth.Data.Models;
 using RentACloth.Services.Mapping;
@@ -36,22 +37,6 @@ namespace RentACloth.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(
-            //        this.Configuration.GetConnectionString("DefaultConnection")));
-
-            //services.AddDefaultIdentity<User>(
-            //        options =>
-            //        {
-            //            options.Password.RequiredLength = 6;
-            //            options.Password.RequireLowercase = false;
-            //            options.Password.RequireNonAlphanumeric = false;
-            //            options.Password.RequireUppercase = false;
-            //            options.Password.RequireDigit = false;
-            //        }
-            //    )
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
-
             services.AddDbContext<RentAClothContext>(options =>
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
@@ -70,6 +55,8 @@ namespace RentACloth.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // Application services
+
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

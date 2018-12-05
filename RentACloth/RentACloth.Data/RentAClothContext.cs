@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RentACloth.Data.Models;
+using RentACloth.Data.Models.Entities;
 
 namespace RentACloth.Data
 {

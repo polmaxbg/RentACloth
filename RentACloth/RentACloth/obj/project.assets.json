@@ -4629,13 +4629,24 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "RentACloth.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/RentACloth.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RentACloth.Common.dll": {}
+        }
+      },
       "RentACloth.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.4",
           "Microsoft.EntityFrameworkCore.Design": "2.1.4",
-          "Microsoft.Extensions.Identity.Stores": "2.1.6"
+          "Microsoft.Extensions.Identity.Stores": "2.1.6",
+          "RentACloth.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RentACloth.Data.dll": {}
@@ -12577,6 +12588,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "RentACloth.Common/1.0.0": {
+      "type": "project",
+      "path": "../RentACloth.Common/RentACloth.Common.csproj",
+      "msbuildProject": "../RentACloth.Common/RentACloth.Common.csproj"
     },
     "RentACloth.Data/1.0.0": {
       "type": "project",

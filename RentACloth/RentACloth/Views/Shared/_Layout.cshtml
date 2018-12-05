@@ -74,7 +74,6 @@
     </body>
     </html>*@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,10 +87,10 @@
     <title>@ViewData["Title"] - RentACloth</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="~/css/shop-homepage.css" rel="stylesheet">
+    <link href="~/css/login.css" rel="stylesheet">
 
 </head>
 
@@ -109,8 +108,8 @@
                     <li class="nav-item active">
                         <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="About"class="nav-link" >About</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Contact"class="nav-link" >Contact</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -119,7 +118,7 @@
 
     <!-- Page Content -->
     <div class="container">
-            @RenderBody()
+        @RenderBody()
     </div>
     <!-- /.container -->
     <!-- Footer -->
@@ -131,9 +130,29 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-@RenderSection("Scripts", required: false)
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
 
 </body>
 
