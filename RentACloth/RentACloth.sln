@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Web", "RentACloth\RentACloth.Web.csproj", "{C1E9092D-24D6-4610-BABF-9875CA3D4B74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth", "RentACloth\RentACloth.csproj", "{C1E9092D-24D6-4610-BABF-9875CA3D4B74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Data", "RentACloth.Data\RentACloth.Data.csproj", "{5532EF45-994F-424B-A8A3-1AEF95075CA6}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Services.Mapping
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Services", "RentACloth.Services\RentACloth.Services.csproj", "{DB443F1B-C8D6-4A69-9267-3C6081C73A98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth.Common", "RentACloth.Common\RentACloth.Common.csproj", "{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Common", "RentACloth.Common\RentACloth.Common.csproj", "{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace RentACloth.Web
+namespace RentACloth
 {
     public class Program
     {

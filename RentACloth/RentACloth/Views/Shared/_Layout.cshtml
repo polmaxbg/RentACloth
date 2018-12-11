@@ -73,12 +73,9 @@
         @RenderSection("Scripts", required: false)
     </body>
     </html>*@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -87,11 +84,10 @@
     <title>@ViewData["Title"] - RentACloth</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="~/css/shop-homepage.css" rel="stylesheet">
-    <link href="~/css/login.css" rel="stylesheet">
-
+    <link href="~/css/login.css" rel="stylesheet">\
 </head>
 
 <body>
@@ -122,7 +118,7 @@
     </div>
     <!-- /.container -->
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-2 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
         </div>
@@ -130,12 +126,11 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    @*<script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>*@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/css/bootstrap.css"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"

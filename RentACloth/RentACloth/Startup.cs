@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +10,7 @@ using RentACloth.Data;
 using RentACloth.Data.Models;
 using RentACloth.Services.Mapping;
 
-namespace RentACloth.Web
+namespace RentACloth
 {
     public class Startup
     {
@@ -57,6 +56,13 @@ namespace RentACloth.Web
             // Application services
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+
+
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
