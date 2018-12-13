@@ -58,7 +58,6 @@ namespace RentACloth.Services.Mapping
                 from i in t.GetTypeInfo().GetInterfaces()
                 where i.GetTypeInfo().IsGenericType &&
                       i.GetTypeInfo().GetGenericTypeDefinition() == typeof(IMapTo<>) &&
-                      !t.GetTypeInfo().IsAbstract &&
                       !t.GetTypeInfo().IsInterface
                 select new TypesMap
                 {

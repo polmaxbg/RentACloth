@@ -1,0 +1,40 @@
+﻿@model RentACloth.Models.ProductsViewModel.IndexViewModel
+
+@{
+    ViewData["Title"] = "All";
+}
+
+<h2>All</h2>
+<div class="d-flex justify-content-between">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr class="row">
+                <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>#</h3></th>
+                <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>ID</h3></th>
+                <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Name</h3></th>
+                <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Brand Name</h3></th>
+                <th scope="col" class="col-lg-2 d-flex justify-content-center"><h3>Price</h3></th>
+                <th scope="col" class="col-lg-1 d-flex justify-content-center"><h3>Eventype</h3></th>
+                <th scope="col" class="col-lg-1 d-flex justify-content-center"><h3>Description</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+        @for (int i = 0; i < Model.Products.Count(); i++)
+        {
+            {
+                var index = i + 1;
+                var product = Model.Products.ToList()[i];
+            <tr class="row">
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@index</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.Id</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.Name</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.BrandName</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.Price</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.EvenType</h5></td>
+                <td class="col-lg-2 d-flex justify-content-center"><h5>@product.Description</h5></td>
+            </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>

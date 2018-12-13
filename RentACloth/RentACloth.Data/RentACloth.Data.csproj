@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RentACloth.Common\RentACloth.Common.csproj" />
+    <ProjectReference Include="..\RentACloth.Services.Mapping\RentACloth.Services.Mapping.csproj" />
   </ItemGroup>
 
   <ItemGroup>

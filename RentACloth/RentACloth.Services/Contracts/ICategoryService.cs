@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using RentACloth.Services.Models.Categories;
 
-namespace RentACloth.Services
+namespace RentACloth.Services.Contracts
 {
     public interface ICategoryService
     {

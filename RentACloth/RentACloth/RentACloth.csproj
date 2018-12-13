@@ -33,6 +33,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RentACloth.Data\RentACloth.Data.csproj" />
     <ProjectReference Include="..\RentACloth.Services.Mapping\RentACloth.Services.Mapping.csproj" />
+    <ProjectReference Include="..\RentACloth.Services\RentACloth.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +49,12 @@
     <Content Update="wwwroot\vendor\bootstrap\css\bootstrap.min.css.map">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Administration\Controllers\" />
+    <Folder Include="Areas\Administration\Views\" />
+    <Folder Include="Areas\Administration\ViewModels\" />
   </ItemGroup>
 
 </Project>

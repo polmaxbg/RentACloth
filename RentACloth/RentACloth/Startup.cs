@@ -7,9 +7,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RentACloth.Common;
+using RentACloth.Controllers;
 using RentACloth.Data;
 using RentACloth.Data.Models;
 using RentACloth.Middlewares;
+using RentACloth.Models.ProductsViewModel;
+using RentACloth.Services;
+using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
 
 namespace RentACloth
@@ -27,7 +31,8 @@ namespace RentACloth
         public void ConfigureServices(IServiceCollection services)
         {
             AutoMapperConfig.RegisterMappings(
-                //typeof(IndexViewModel).Assembly,
+                typeof(IndexViewModel).Assembly,
+                typeof(Product).Assembly
                 //typeof(CreateJokeInputModel).Assembly
             );
 
@@ -61,6 +66,7 @@ namespace RentACloth
             // Application services
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<IProductsService, ProductsService>();
 
 
             services.AddAuthentication().AddFacebook(facebookOptions =>

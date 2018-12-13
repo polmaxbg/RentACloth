@@ -457,6 +457,7 @@
           "Microsoft.EntityFrameworkCore.Design": "2.1.4",
           "Microsoft.Extensions.Identity.Stores": "2.1.6",
           "RentACloth.Common": "1.0.0",
+          "RentACloth.Services.Mapping": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1.0"
         },

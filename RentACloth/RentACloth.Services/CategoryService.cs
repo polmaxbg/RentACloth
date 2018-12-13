@@ -5,6 +5,7 @@ using System.Text;
 using RentACloth.Common;
 using RentACloth.Data;
 using RentACloth.Data.Models;
+using RentACloth.Services.Contracts;
 using RentACloth.Services.Models.Categories;
 using RentACloth.Services.Mapping;
 
