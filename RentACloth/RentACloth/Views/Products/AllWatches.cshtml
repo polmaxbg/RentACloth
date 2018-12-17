@@ -1,0 +1,34 @@
+﻿@model RentACloth.Services.Models.Home.IndexViewModel
+
+@{
+    ViewData["Title"] = "AllWatches";
+}
+
+<h2>All Watches</h2>
+<div class="mx-auto w-50">
+    <table class="table-hover table table-striped">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Brand Name</th>
+            <th>Price</th>
+            <th>Event Type</th>
+            <th>CategoryName</th>
+        </tr>
+        @for (int i = 0; i < Model.Products.Count(); i++)
+        {
+            {
+                var index = i + 1;
+                var product = Model.Products.ToList()[i];
+        <tr>
+            <td>@index</td>
+            <td>@product.Name</td>
+            <td>@product.BrandName</td>
+            <td>@product.Price</td>
+            <td>@product.EvenType</td>
+            <td>@product.CategoryName</td>
+        </tr>
+            }
+        }
+    </table>
+</div>

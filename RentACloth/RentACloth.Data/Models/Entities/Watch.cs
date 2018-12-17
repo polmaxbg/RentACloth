@@ -2,6 +2,5 @@
 {
     public class Watch:Product
     {
-        public int Id { get; set; }
     }
 }

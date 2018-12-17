@@ -17,6 +17,11 @@ namespace RentACloth.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Shoe> Shoes { get; set; }
+        public DbSet<Cloth> Cloths { get; set; }
+        public DbSet<Watch> Watches { get; set; }
+        public DbSet<Accessories> Accessories{ get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Cloth>();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RentACloth.Data.Models.Entities;
 using RentACloth.Data.Models.Enums;
 using RentACloth.Services.Mapping;
 
@@ -21,6 +22,8 @@ namespace RentACloth.Data.Models
 
         public string CategoryName { get; set; }
         public Category Category { get; set; }
+      
+
         public int CategoryId { get; set; }
     }
     

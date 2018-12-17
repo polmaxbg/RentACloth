@@ -85,11 +85,9 @@ namespace RentACloth.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -120,11 +118,9 @@ namespace RentACloth.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -306,7 +302,7 @@ namespace RentACloth.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Accessories", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.Entities.Accessories", b =>
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
@@ -316,7 +312,7 @@ namespace RentACloth.Data.Migrations
                     b.HasDiscriminator().HasValue("Accessories");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Cloth", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.Entities.Cloth", b =>
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
@@ -329,7 +325,7 @@ namespace RentACloth.Data.Migrations
                     b.HasDiscriminator().HasValue("Cloth");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Shoe", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.Entities.Shoe", b =>
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
@@ -341,7 +337,7 @@ namespace RentACloth.Data.Migrations
                     b.HasDiscriminator().HasValue("Shoe");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Watch", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.Entities.Watch", b =>
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 

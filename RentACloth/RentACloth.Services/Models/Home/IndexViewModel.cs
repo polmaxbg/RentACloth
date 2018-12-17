@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using RentACloth.Services.Contracts;
 
-namespace RentACloth.Models.ProductsViewModel
+namespace RentACloth.Services.Models.Home
 {
     public class IndexViewModel
     {

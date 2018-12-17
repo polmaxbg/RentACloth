@@ -21,6 +21,10 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Data.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.xml
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.csprojAssemblyReference.cache
@@ -30,7 +34,3 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\obj\Debug\netcoreapp2.1\RentACloth.Data.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.dll
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.dll
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Data\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.pdb

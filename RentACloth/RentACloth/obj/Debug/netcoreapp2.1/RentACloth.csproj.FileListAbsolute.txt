@@ -7,10 +7,13 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Views.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Common.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Data.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Data.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csprojAssemblyReference.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csproj.CoreCompileInputs.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.RazorAssemblyInfo.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.RazorAssemblyInfo.cs
@@ -69,7 +72,7 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csprojAssemblyReference.cache
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.dll
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\bin\Debug\netcoreapp2.1\RentACloth.Services.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\All.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllShoes.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllClothes.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllAccessories.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllWatches.g.cshtml.cs

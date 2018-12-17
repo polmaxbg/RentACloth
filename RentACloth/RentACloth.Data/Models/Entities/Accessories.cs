@@ -2,6 +2,5 @@
 {
     public class Accessories:Product
     {
-        public int Id { get; set; }
     }
 }

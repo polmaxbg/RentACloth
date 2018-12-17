@@ -55,6 +55,7 @@
     <Folder Include="Areas\Administration\Controllers\" />
     <Folder Include="Areas\Administration\Views\" />
     <Folder Include="Areas\Administration\ViewModels\" />
+    <Folder Include="Models\ProductsViewModel\" />
   </ItemGroup>
 
 </Project>
