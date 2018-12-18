@@ -3,10 +3,8 @@ using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RentACloth.Data.Models;
-
+using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
-using RentACloth.Services.Mapping;
 using RentACloth.Services.Models.Home;
 
 namespace RentACloth.Controllers
@@ -16,16 +14,18 @@ namespace RentACloth.Controllers
         private readonly IShoesService shoesService;
         private readonly IClothService clothesService;
         private readonly IAccessoriesService accessoriesService;
-        private readonly IWatchesService watchesService
-            ;
+        private readonly IWatchesService watchesService;
+        private readonly IProductService productService;
 
 
-        public ProductsController(IShoesService shoesService, IClothService clothesService, IAccessoriesService accessories, IWatchesService watchesService)
+
+        public ProductsController(IShoesService shoesService, IClothService clothesService, IAccessoriesService accessories, IWatchesService watchesService, IProductService productService)
         {
             this.shoesService = shoesService;
             this.clothesService = clothesService;
             this.accessoriesService = accessories;
             this.watchesService = watchesService;
+            this.productService = productService;
         }
 
         public IActionResult AllShoes()
@@ -70,6 +70,12 @@ namespace RentACloth.Controllers
                 Products = clothes
             };
             return this.View(viewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var product = this.productService.GetProductById<ProductDetailsViewModel>(id);
+            return this.View(product);
         }
     }
 }

@@ -22,9 +22,6 @@ namespace RentACloth.Data.Models
 
         public string CategoryName { get; set; }
         public Category Category { get; set; }
-      
-
         public int CategoryId { get; set; }
     }
-    
 }

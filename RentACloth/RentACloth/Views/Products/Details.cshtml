@@ -1,0 +1,28 @@
+﻿@model RentACloth.Models.ProductsViewModel.ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+<div class="mx-auto w-50">
+    <table class="table-hover table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Brand Name</th>
+            <th>Event Type</th>
+            <th>Size</th>
+        </tr>
+       
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+            <td>@Model.Description</td>
+            <td>@Model.BrandName</td>
+            <td>@Model.EventType</td>
+            <td>@Model.Size</td>
+        </tr>
+    </table>
+</div>

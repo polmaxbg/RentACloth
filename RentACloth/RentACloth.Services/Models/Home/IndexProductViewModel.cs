@@ -8,6 +8,7 @@ namespace RentACloth.Services.Models.Home
         IMapFrom<Cloth>,IMapTo<Cloth>, IMapFrom<Accessories>, IMapTo<Accessories>,
         IMapFrom<Watch>, IMapTo<Watch>, IHaveCustomMappings
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string BrandName { get; set; }

@@ -11,6 +11,7 @@ using RentACloth.Controllers;
 using RentACloth.Data;
 using RentACloth.Data.Models;
 using RentACloth.Middlewares;
+using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services;
 using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
@@ -31,7 +32,8 @@ namespace RentACloth
         public void ConfigureServices(IServiceCollection services)
         {
             AutoMapperConfig.RegisterMappings(
-                typeof(IndexProductViewModel).Assembly
+                typeof(IndexProductViewModel).Assembly,
+                typeof(ProductDetailsViewModel).Assembly
             );
 
             services.Configure<CookiePolicyOptions>(options =>
@@ -68,6 +70,7 @@ namespace RentACloth
             services.AddScoped<IClothService, ClothesService>();
             services.AddScoped<IAccessoriesService, AccessoriesService>();
             services.AddScoped<IWatchesService, WatchesService>();
+            services.AddScoped<IProductService, ProductService>();
 
 
 

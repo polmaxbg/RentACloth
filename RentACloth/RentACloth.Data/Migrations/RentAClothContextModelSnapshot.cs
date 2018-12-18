@@ -236,11 +236,15 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<int>("Quantity");
 
+                    b.Property<int>("ShoeId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("ShoeId");
 
                     b.ToTable("Products");
 
@@ -430,6 +434,11 @@ namespace RentACloth.Data.Migrations
                     b.HasOne("RentACloth.Data.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("RentACloth.Data.Models.Entities.Shoe", "Shoe")
+                        .WithMany()
+                        .HasForeignKey("ShoeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
