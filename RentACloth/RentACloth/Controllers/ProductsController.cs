@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
@@ -75,7 +76,14 @@ namespace RentACloth.Controllers
         public IActionResult Details(int id)
         {
             var product = this.productService.GetProductById<ProductDetailsViewModel>(id);
-            return this.View(product);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+   
+
+            return View(product);
         }
     }
 }

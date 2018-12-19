@@ -13,7 +13,10 @@
             <th>Description</th>
             <th>Brand Name</th>
             <th>Event Type</th>
-            <th>Size</th>
+            @if (@Model.CategoryName == "Shoes" || @Model.CategoryName == "Clothes")
+            {
+                <th>Size</th>
+            }
         </tr>
        
         <tr>
@@ -22,7 +25,10 @@
             <td>@Model.Description</td>
             <td>@Model.BrandName</td>
             <td>@Model.EventType</td>
-            <td>@Model.Size</td>
+            @if (@Model.CategoryName == "Shoes" || @Model.CategoryName == "Clothes")
+            {
+                <td>@Model.Size</td>
+            }
         </tr>
     </table>
 </div>

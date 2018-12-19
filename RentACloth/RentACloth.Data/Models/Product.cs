@@ -15,6 +15,8 @@ namespace RentACloth.Data.Models
         public int Quantity { get; set; }
         public string Description { get; set; }
         public EventType EventType { get; set; }
+        public string ProductType { get; set; }
+        public string Size { get; set; }
 
         public string BrandName { get; set; }
         public Brand Brand { get; set; }

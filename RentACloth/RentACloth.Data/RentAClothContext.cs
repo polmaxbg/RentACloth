@@ -29,6 +29,12 @@ namespace RentACloth.Data
             builder.Entity<Watch>();
             builder.Entity<Accessories>();
 
+            builder.Entity<Product>()
+                .HasDiscriminator<string>("ProductType")
+                .HasValue<Cloth>("Cloth")
+                .HasValue<Shoe>("Shoe")
+                .HasValue<Accessories>("Accessories")
+                .HasValue<Watch>("Watch");
             base.OnModelCreating(builder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.

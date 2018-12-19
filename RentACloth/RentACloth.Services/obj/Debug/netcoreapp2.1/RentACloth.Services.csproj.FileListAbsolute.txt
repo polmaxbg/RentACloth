@@ -5,12 +5,10 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcore
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\RentACloth.Data.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\RentACloth.Data.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\RentACloth.Services.Mapping.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.xml
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.csprojAssemblyReference.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.csproj.CoreCompileInputs.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.AssemblyInfoInputs.cache
@@ -18,3 +16,5 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcore
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\obj\Debug\netcoreapp2.1\RentACloth.Services.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.SqlServer.xml
