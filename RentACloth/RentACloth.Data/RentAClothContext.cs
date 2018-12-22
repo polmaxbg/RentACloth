@@ -22,6 +22,10 @@ namespace RentACloth.Data
         public DbSet<Watch> Watches { get; set; }
         public DbSet<Accessories> Accessories{ get; set; }
 
+        public DbSet<ShoppingBag> ShoppingBags { get; set; }
+
+        public DbSet<ShoppingBagProduct> ShoppingBagProducts { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Cloth>();
@@ -35,6 +39,14 @@ namespace RentACloth.Data
                 .HasValue<Shoe>("Shoe")
                 .HasValue<Accessories>("Accessories")
                 .HasValue<Watch>("Watch");
+
+            builder.Entity<ShoppingBagProduct>().HasKey(x => new { x.ProductId, x.ShoppingBagId });
+
+            builder.Entity<ShoppingBag>()
+                .HasOne(x => x.RentAClothUser)
+                .WithOne(x => x.ShoppingBag)
+                .HasForeignKey<RentAClothUser>(x => x.ShoppingBagId)
+                .OnDelete(DeleteBehavior.Restrict);
             base.OnModelCreating(builder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.

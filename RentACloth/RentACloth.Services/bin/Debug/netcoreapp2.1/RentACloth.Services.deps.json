@@ -9,7 +9,8 @@
       "RentACloth.Services/1.0.0": {
         "dependencies": {
           "RentACloth.Data": "1.0.0",
-          "RentACloth.Services.Mapping": "1.0.0"
+          "RentACloth.Services.Mapping": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1.0"
         },
         "runtime": {
           "RentACloth.Services.dll": {}
@@ -473,6 +474,14 @@
           "RentACloth.Services.Mapping.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore.Reference/2.1.1.0": {
         "runtime": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
@@ -859,6 +868,11 @@
     },
     "RentACloth.Services.Mapping/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.1.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

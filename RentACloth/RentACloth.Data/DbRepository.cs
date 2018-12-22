@@ -35,9 +35,9 @@ namespace RentACloth.Data
             this.dbSet.Remove(entity);
         }
 
-        public Task<int> SaveChangesAsync()
+        public int SaveChanges()
         {
-            return this.context.SaveChangesAsync();
+            return this.context.SaveChanges();
         }
 
         public void Dispose()

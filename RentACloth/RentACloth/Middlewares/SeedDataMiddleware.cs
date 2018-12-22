@@ -54,7 +54,7 @@ namespace RentACloth.Middlewares
                     Email = "admin@gmail.com",
                     FirstName = "AdminFirstName",
                     LastName = "AdminLastName",
-                    //ShoppingCart = new ShoppingCart()
+                    ShoppingBag = new ShoppingBag()
                 };
 
                 var password = "123456";

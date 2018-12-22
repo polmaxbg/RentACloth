@@ -71,6 +71,8 @@ namespace RentACloth
             services.AddScoped<IAccessoriesService, AccessoriesService>();
             services.AddScoped<IWatchesService, WatchesService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IShoppingBagService, ShoppingBagService>();
+            services.AddScoped<IUserService, UserService>();
 
 
 

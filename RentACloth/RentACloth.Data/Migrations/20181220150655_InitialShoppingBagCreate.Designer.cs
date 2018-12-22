@@ -10,8 +10,8 @@ using RentACloth.Data;
 namespace RentACloth.Data.Migrations
 {
     [DbContext(typeof(RentAClothContext))]
-    [Migration("20181219162632_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20181220150655_InitialShoppingBagCreate")]
+    partial class InitialShoppingBagCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -238,13 +238,15 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<int>("Quantity");
 
+                    b.Property<string>("Size");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
 
                     b.HasDiscriminator<string>("ProductType").HasValue("Product");
                 });
@@ -286,6 +288,8 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<string>("SecurityStamp");
 
+                    b.Property<int>("ShoppingBagId");
+
                     b.Property<bool>("TwoFactorEnabled");
 
                     b.Property<string>("UserName")
@@ -301,7 +305,36 @@ namespace RentACloth.Data.Migrations
                         .HasName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
+                    b.HasIndex("ShoppingBagId")
+                        .IsUnique();
+
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.ShoppingBag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShoppingBags");
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.ShoppingBagProduct", b =>
+                {
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("ShoppingBagId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("ProductId", "ShoppingBagId");
+
+                    b.HasIndex("ShoppingBagId");
+
+                    b.ToTable("ShoppingBagProducts");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.Entities.Accessories", b =>
@@ -320,8 +353,6 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<int>("ClothType");
 
-                    b.Property<string>("Size");
-
                     b.ToTable("Cloth");
 
                     b.HasDiscriminator().HasValue("Cloth");
@@ -331,8 +362,6 @@ namespace RentACloth.Data.Migrations
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
-                    b.Property<string>("Size")
-                        .HasColumnName("Shoe_Size");
 
                     b.ToTable("Shoe");
 
@@ -432,6 +461,27 @@ namespace RentACloth.Data.Migrations
                     b.HasOne("RentACloth.Data.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.RentAClothUser", b =>
+                {
+                    b.HasOne("RentACloth.Data.Models.ShoppingBag", "ShoppingBag")
+                        .WithOne("RentAClothUser")
+                        .HasForeignKey("RentACloth.Data.Models.RentAClothUser", "ShoppingBagId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("RentACloth.Data.Models.ShoppingBagProduct", b =>
+                {
+                    b.HasOne("RentACloth.Data.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("RentACloth.Data.Models.ShoppingBag", "ShoppingBag")
+                        .WithMany("ShoppingBagProducts")
+                        .HasForeignKey("ShoppingBagId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -22,5 +22,11 @@ namespace RentACloth.Services
             var product = this.productRepository.All().Where(x => x.Id == id).To<TViewModel>().FirstOrDefault();
             return product;
         }
+
+        public Product GetProduct(int id)
+        {
+            var product = this.productRepository.All().FirstOrDefault(m => m.Id == id);
+            return product;
+        }
     }
 }

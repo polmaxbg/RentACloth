@@ -59,11 +59,17 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Ra
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllAccessories.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllClothes.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllShoes.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllWatches.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\Details.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingBag\Index.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.RazorTargetAssemblyInfo.cache
@@ -72,8 +78,3 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllShoes.g.cshtml.cs
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllClothes.g.cshtml.cs
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllAccessories.g.cshtml.cs
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllWatches.g.cshtml.cs
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\Details.g.cshtml.cs
