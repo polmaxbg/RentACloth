@@ -129,6 +129,31 @@ namespace RentACloth.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("RentACloth.Data.Models.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AddressDetails");
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<int>("RentAClothUserId");
+
+                    b.Property<string>("RentAClothUserId1");
+
+                    b.Property<string>("Street");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RentAClothUserId1");
+
+                    b.ToTable("Addresses");
+                });
+
             modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -165,11 +190,19 @@ namespace RentACloth.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<int?>("DeliveryAddressId");
 
-                    b.Property<string>("Number");
+                    b.Property<DateTime?>("DeliveryDate");
+
+                    b.Property<DateTime?>("EstimatedDeliveryDate");
+
+                    b.Property<DateTime?>("OrderDate");
+
+                    b.Property<string>("PhoneNumber");
 
                     b.Property<int>("Quantity");
+
+                    b.Property<string>("Recepient");
 
                     b.Property<decimal>("TotalPrice");
 
@@ -177,12 +210,14 @@ namespace RentACloth.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DeliveryAddressId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.OrderDetails", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.OrderProduct", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -421,6 +456,13 @@ namespace RentACloth.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("RentACloth.Data.Models.Address", b =>
+                {
+                    b.HasOne("RentACloth.Data.Models.RentAClothUser", "RentAClothUser")
+                        .WithMany("Addresses")
+                        .HasForeignKey("RentAClothUserId1");
+                });
+
             modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
                 {
                     b.HasOne("RentACloth.Data.Models.Category", "Category")
@@ -431,15 +473,19 @@ namespace RentACloth.Data.Migrations
 
             modelBuilder.Entity("RentACloth.Data.Models.Order", b =>
                 {
+                    b.HasOne("RentACloth.Data.Models.Address", "DeliveryAddress")
+                        .WithMany("Addresses")
+                        .HasForeignKey("DeliveryAddressId");
+
                     b.HasOne("RentACloth.Data.Models.RentAClothUser", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.OrderDetails", b =>
+            modelBuilder.Entity("RentACloth.Data.Models.OrderProduct", b =>
                 {
                     b.HasOne("RentACloth.Data.Models.Order", "Order")
-                        .WithMany()
+                        .WithMany("OrderProducts")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -473,7 +519,7 @@ namespace RentACloth.Data.Migrations
             modelBuilder.Entity("RentACloth.Data.Models.ShoppingBagProduct", b =>
                 {
                     b.HasOne("RentACloth.Data.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("ShoppingBagProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RentACloth.Data.Models
 {
-    public class OrderDetails
+    public class OrderProduct
     {
         public int Id { get; set; }
         public DateTime Date{ get; set; }

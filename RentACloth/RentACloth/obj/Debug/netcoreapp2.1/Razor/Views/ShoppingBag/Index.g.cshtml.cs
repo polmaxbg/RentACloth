@@ -119,7 +119,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                            </td>\r\n                            <td class=\"col-1 d-flex justify-content-center\">\r\n                                ");
             EndContext();
             BeginContext(1704, 138, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "344f51a8b097497093b6fbcad25cdd7d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b3a0619eaa64faca459f45b06272003", async() => {
                 BeginContext(1803, 35, true);
                 WriteLiteral("<i class=\"fas fa-times-circle\"></i>");
                 EndContext();
@@ -167,7 +167,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("</td>\r\n                            <td class=\"col-1 d-flex justify-content-center\">\r\n                                ");
             EndContext();
             BeginContext(2086, 188, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82191db410e04fa992069a23ac3213cb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1cc0f33429b049cb8bf02dbcbcfe2e8a", async() => {
                 BeginContext(2233, 37, true);
                 WriteLiteral("<i class=\"fas fa-minus-circle\"> </i> ");
                 EndContext();
@@ -224,7 +224,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                                ");
             EndContext();
             BeginContext(2359, 187, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45efefc4edc6404e98f9c045345e6c9b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b486eff361284adca1de26c1236df2d7", async() => {
                 BeginContext(2506, 36, true);
                 WriteLiteral("<i class=\"fas fa-plus-circle\"> </i> ");
                 EndContext();
@@ -309,7 +309,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral(" лв.</p>\r\n            <div class=\"mb-2 \">\r\n                ");
             EndContext();
             BeginContext(3262, 117, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2515a43e8d5545d0b309e1a668383c9e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cff9d81494684a60a4cdb6d6a9623397", async() => {
                 BeginContext(3366, 9, true);
                 WriteLiteral(" Продължи");
                 EndContext();

@@ -13,9 +13,10 @@ namespace RentACloth.Data
         }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<OrderDetails> OrderDetails { get; set; }
+        public DbSet<OrderProduct> OrderDetails { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Shoe> Shoes { get; set; }
         public DbSet<Cloth> Cloths { get; set; }

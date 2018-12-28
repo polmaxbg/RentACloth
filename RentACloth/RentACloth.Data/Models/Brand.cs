@@ -11,6 +11,5 @@ namespace RentACloth.Data.Models
 
         public virtual Category Category { get; set; }
         public int CategoryId { get; set; }
-        
     }
 }

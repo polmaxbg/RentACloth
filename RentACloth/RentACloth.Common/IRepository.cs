@@ -11,7 +11,7 @@ namespace RentACloth.Common
     {
         IQueryable<TEntity> All();
 
-        Task AddAsync(TEntity entity);
+        void Add(TEntity entity);
 
         void Delete(TEntity entity);
 

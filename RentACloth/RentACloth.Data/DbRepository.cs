@@ -20,9 +20,9 @@ namespace RentACloth.Data
             this.context = context;
             this.dbSet = context.Set<TEntity>();
         }
-        public Task AddAsync(TEntity entity)
+        public void Add(TEntity entity)
         {
-            return this.dbSet.AddAsync(entity);
+            this.dbSet.Add(entity);
         }
 
         public IQueryable<TEntity> All()

@@ -27,7 +27,7 @@ namespace RentACloth.Data.Models
         public int CategoryId { get; set; }
 
 
-        public virtual ICollection<ShoppingBagProduct> ShoppingBagProducts { get; set; } = new List<ShoppingBagProduct>();
+        public virtual ICollection<ShoppingBagProduct> ShoppingBagProducts { get; set; } = new HashSet<ShoppingBagProduct>();
 
     }
 }

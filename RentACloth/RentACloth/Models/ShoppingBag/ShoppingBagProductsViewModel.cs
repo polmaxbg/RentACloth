@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using RentACloth.Data.Models;
+﻿using RentACloth.Data.Models;
 using RentACloth.Services.Mapping;
-using RentACloth.Data.Models;
 
 namespace RentACloth.Models.ShoppingBag
 {
