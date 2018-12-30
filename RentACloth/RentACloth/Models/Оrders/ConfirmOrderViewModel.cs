@@ -1,4 +1,4 @@
-﻿namespace RentACloth.Controllers
+﻿namespace RentACloth.Models.Оrders
 {
     public class ConfirmOrderViewModel
     {

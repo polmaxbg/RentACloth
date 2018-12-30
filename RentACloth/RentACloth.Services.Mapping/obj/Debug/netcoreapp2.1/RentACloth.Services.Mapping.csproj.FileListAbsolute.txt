@@ -6,4 +6,3 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services.Mapping\obj\Debug
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services.Mapping\obj\Debug\netcoreapp2.1\RentACloth.Services.Mapping.AssemblyInfo.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services.Mapping\obj\Debug\netcoreapp2.1\RentACloth.Services.Mapping.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services.Mapping\obj\Debug\netcoreapp2.1\RentACloth.Services.Mapping.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Services.Mapping\obj\Debug\netcoreapp2.1\RentACloth.Services.Mapping.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -10,6 +11,7 @@ using RentACloth.Common;
 using RentACloth.Controllers;
 using RentACloth.Data;
 using RentACloth.Data.Models;
+using RentACloth.MappingConfiguration;
 using RentACloth.Middlewares;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services;
@@ -35,8 +37,11 @@ namespace RentACloth
             AutoMapperConfig.RegisterMappings(
                 typeof(IndexProductViewModel).Assembly,
                 typeof(ProductDetailsViewModel).Assembly,
-                typeof(IndexAddressViewModel).Assembly
-            );
+                typeof(IndexAddressViewModel).Assembly,
+                typeof(CategoryViewModel).Assembly,
+                typeof(EditChildCategoryViewModel).Assembly,
+                typeof(AllChildCategoryViewModel).Assembly
+             );
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -49,22 +54,23 @@ namespace RentACloth
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
 
-           services.AddIdentity<RentAClothUser, IdentityRole>(
-                    options =>
-                    {
-                        options.Password.RequiredLength = 3;
-                        options.Password.RequireLowercase = false;
-                        options.Password.RequireNonAlphanumeric = false;
-                        options.Password.RequireUppercase = false;
-                        options.Password.RequireDigit = false;
-                    }
-                )
-               .AddDefaultTokenProviders()
-               .AddDefaultUI()
-               .AddEntityFrameworkStores<RentAClothContext>();
+            services.AddIdentity<RentAClothUser, IdentityRole>(
+                     options =>
+                     {
+                         options.Password.RequiredLength = 3;
+                         options.Password.RequireLowercase = false;
+                         options.Password.RequireNonAlphanumeric = false;
+                         options.Password.RequireUppercase = false;
+                         options.Password.RequireDigit = false;
+                     }
+                 )
+                .AddDefaultTokenProviders()
+                .AddDefaultUI()
+                .AddEntityFrameworkStores<RentAClothContext>();
 
             services.AddDistributedMemoryCache();
 
+            
             // Application services
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
@@ -77,6 +83,8 @@ namespace RentACloth
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IAddressService, AddressService>();
+            services.AddScoped<IChildCategoryService, ChildCategoryService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
 
 

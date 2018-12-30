@@ -82,7 +82,7 @@
     <meta name="author" content="">
 
     <title>@ViewData["Title"] - RentACloth</title>
-    
+
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -106,10 +106,19 @@
                     <li class="nav-item active">
                         <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllShoes" class="nav-link">Shoes</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Cloth</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Accessories</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Watches</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllShoes" class="nav-link">Обувки</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
+                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item"><a asp-area="" asp-controller="Orders" asp-action="MyOrders" class="nav-link">Моите поръчки</a></li>
+                        if (User.IsInRole("Admin"))
+                        {
+                        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="CreateProduct" class="nav-link">Добавяне на продукт</a></li>
+
+                        }
+                    }
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -122,7 +131,8 @@
         </div>
     </main>
     <!-- /.container -->
-    <!-- Footer -->
+<!-- Footer -->
+    <hr />
     <footer class="py-2 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>

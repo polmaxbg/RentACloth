@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
@@ -81,9 +82,32 @@ namespace RentACloth.Controllers
             {
                 return NotFound();
             }
-   
 
             return View(product);
         }
+
+        [Authorize(Roles = "Administrator")]
+        public IActionResult CreateProduct()
+        {
+            return this.View();
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        public IActionResult CreateProduct(CreateProductViewModel model)
+        {
+            return this.View();
+        }
+    }
+
+    public class CreateProductViewModel
+    {
+        public string ProductName { get; set; }
+        public decimal Price { get; set; }
+        public string Description { get; set; }
+        public string Size { get; set; }
+        public string ProductType { get; set; }
+        public string EventType { get; set; }
+        public string S { get; set; }
     }
 }

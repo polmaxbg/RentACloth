@@ -5,7 +5,7 @@ namespace RentACloth.Data.Models
     public class ShoppingBag
     {
         public int Id { get; set; }
-        public RentAClothUser RentAClothUser { get; set; }
-        public ICollection<ShoppingBagProduct> ShoppingBagProducts { get; set; } = new HashSet<ShoppingBagProduct>();
+        public virtual RentAClothUser RentAClothUser { get; set; }
+        public virtual ICollection<ShoppingBagProduct> ShoppingBagProducts { get; set; } = new HashSet<ShoppingBagProduct>();
     }
 }

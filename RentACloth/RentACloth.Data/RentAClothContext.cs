@@ -13,8 +13,13 @@ namespace RentACloth.Data
         }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<OrderProduct> OrderDetails { get; set; }
+        public DbSet<ChildCategory> ChildCategories { get; set; }
+
+
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderDetails { get; set; }
+
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
@@ -24,7 +29,6 @@ namespace RentACloth.Data
         public DbSet<Accessories> Accessories{ get; set; }
 
         public DbSet<ShoppingBag> ShoppingBags { get; set; }
-
         public DbSet<ShoppingBagProduct> ShoppingBagProducts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

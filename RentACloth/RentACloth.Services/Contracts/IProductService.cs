@@ -9,5 +9,8 @@ namespace RentACloth.Services.Contracts
     {
         TViewModel GetProductById<TViewModel>(int id);
         Product GetProduct(int id);
+
+        void AddProduct(Product product);
+
     }
 }

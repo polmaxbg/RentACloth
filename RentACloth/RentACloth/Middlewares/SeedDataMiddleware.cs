@@ -12,7 +12,7 @@ namespace RentACloth.Middlewares
     public class SeedDataMiddleware
     {
         private const string ROLE_ADMIN = "Admin";
-        private const string ROLE_PARTNER = "User";
+        private const string ROLE_USER = "User";
 
         private readonly RequestDelegate _next;
 
@@ -38,9 +38,9 @@ namespace RentACloth.Middlewares
                 await roleManager.CreateAsync(new IdentityRole(ROLE_ADMIN));
             }
 
-            if (!await roleManager.RoleExistsAsync(ROLE_PARTNER))
+            if (!await roleManager.RoleExistsAsync(ROLE_USER))
             {
-                await roleManager.CreateAsync(new IdentityRole(ROLE_PARTNER));
+                await roleManager.CreateAsync(new IdentityRole(ROLE_USER));
             }
         }
 

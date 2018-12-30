@@ -59,6 +59,9 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Ra
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Confirm.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Create.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Orders\MyOrders.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllAccessories.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllClothes.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\AllShoes.g.cshtml.cs
@@ -78,5 +81,6 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.pdb
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Create.g.cshtml.cs
-C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Confirm.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Add.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\All.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Edit.g.cshtml.cs

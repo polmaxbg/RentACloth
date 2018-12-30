@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RentACloth.Common;
 using RentACloth.Data.Models;
+using RentACloth.Models.Оrders;
 using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
-using RentACloth.Services.Models.Addresses;
 
 namespace RentACloth.Controllers
 {
@@ -21,13 +22,16 @@ namespace RentACloth.Controllers
         private readonly IUserService userService;
         private readonly IOrderService orderService;
         private readonly IShoppingBagService shoppingBagService;
+        private readonly IMapper mapper;
+        private readonly IRepository<OrderProduct> orderProductRepository;
 
-        public OrdersController(IAddressService adressesService, IUserService userService, IOrderService orderService, IShoppingBagService shoppingCartService)
+        public OrdersController(IAddressService adressesService, IUserService userService, IOrderService orderService, IShoppingBagService shoppingBagService,  IRepository<OrderProduct> orderProductRepository)
         {
             this.adressesService = adressesService;
             this.userService = userService;
             this.orderService = orderService;
-            this.shoppingBagService = shoppingCartService;
+            this.shoppingBagService = shoppingBagService;
+            this.orderProductRepository = orderProductRepository;
         }
 
         public IActionResult Create()
@@ -112,45 +116,25 @@ namespace RentACloth.Controllers
             //TODO:
             return this.RedirectToAction("Index","Home");
         }
-    }
 
-    public class ConfirmOrderViewModel:IMapFrom<Order>,IMapTo<Order>
-    {
-        public decimal TotalPrice { get; set; }
+        [Authorize]
+        public IActionResult MyOrders()
+        {
 
-        public decimal DeliveryPrice { get; set; }
+            var orders = this.orderProductRepository.All().Where(x=>x.Order.User.UserName==this.User.Identity.Name).Select(x => new MyOrderViewModel()
+            {
+                Id = x.OrderId,
+                Quantity = x.ProductQuantity,
+                TotalPrice = x.Order.TotalPrice,
+                ProductName = x.ProductName,
+                ProductPrice = x.Product.Price.ToString(),
+                ProductId = x.ProductId
+            });
 
-        public string Recipient { get; set; }
 
-        public string PhoneNumber { get; set; }
+            var viewModel = new MyOrdersViewModel() {Orders = orders};
 
-        public string DeliveryAddressDescription { get; set; }
-
-        public string DeliveryAddressStreet { get; set; }
-
-        public string DeliveryAddressCityName { get; set; }
-    }
-
-    public class CreateOrderViewModel
-    {
-        public List<IndexAddressViewModel> OrderAddressesViewModel { get; set; }
-        public IndexAddressViewModel OrderAdressViewModel { get; set; }
-
-        [Display(Name = "Адрес на получаване")]
-        [Required(ErrorMessage = "Моля изберете \"{0}\".")]
-        public int? DeliveryAddressId { get; set; }
-
-        [Display(Name = "Име на получателя")]
-        [Required(ErrorMessage = "Моля въведете \"{0}\".")]
-        public string FullName { get; set; }
-
-        [Display(Name = "GSM номер")]
-        [Required(ErrorMessage = "Моля въведете \"{0}\".")]
-        public string PhoneNumber { get; set; }
-    }
-
-    public class OrdersAddressViewModel
-    {
-        public IEnumerable<IndexAddressViewModel> Addresses { get; set; }
+            return this.View(viewModel);
+        }
     }
 }

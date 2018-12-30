@@ -184,6 +184,23 @@ namespace RentACloth.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("RentACloth.Data.Models.ChildCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoryId");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ChildCategories");
+                });
+
             modelBuilder.Entity("RentACloth.Data.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -258,6 +275,8 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<string>("CategoryName");
 
+                    b.Property<int?>("ChildCategoryId");
+
                     b.Property<string>("Description");
 
                     b.Property<int>("EventType");
@@ -278,6 +297,8 @@ namespace RentACloth.Data.Migrations
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("ChildCategoryId");
 
                     b.ToTable("Products");
 
@@ -471,6 +492,14 @@ namespace RentACloth.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("RentACloth.Data.Models.ChildCategory", b =>
+                {
+                    b.HasOne("RentACloth.Data.Models.Category", "Category")
+                        .WithMany("ChildCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("RentACloth.Data.Models.Order", b =>
                 {
                     b.HasOne("RentACloth.Data.Models.Address", "DeliveryAddress")
@@ -506,6 +535,10 @@ namespace RentACloth.Data.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("RentACloth.Data.Models.ChildCategory")
+                        .WithMany("Products")
+                        .HasForeignKey("ChildCategoryId");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.RentAClothUser", b =>

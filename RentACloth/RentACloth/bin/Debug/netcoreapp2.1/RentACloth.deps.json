@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "8eca056fee110e3b50d3b6723ceaca75ce37cff2"
+    "signature": "8b8988d6e2a457fe7cfd2bf971ace708aa72c1d1"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,9 @@
     ".NETCoreApp,Version=v2.1": {
       "RentACloth/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.0.0",
+          "AutoMapper.Extensions": "2.1.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Authentication.Facebook": "2.1.2",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
@@ -53,6 +56,35 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions/2.1.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication/2.1.2": {
@@ -3590,6 +3622,20 @@
       "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
       "path": "automapper/8.0.0",
       "hashPath": "automapper.8.0.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Raapudp/vtJxFaw1BM5AmgKniYH8GtFXTPxXuDhNKZ199Es7iFUiyJyZybj/5udMVzDDJ2tyiocM/5nnQWRj/g==",
+      "path": "automapper.extensions/2.1.0",
+      "hashPath": "automapper.extensions.2.1.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EHxmLh6OuTuiGU3U+pHhNHwWOq1juK+Wbvr2n7Oj8/L819+DCnr7dtVtIGmBYHrle6foukEXqT5rcbRS9+CFyA==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/6.0.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.1.2": {
       "type": "package",

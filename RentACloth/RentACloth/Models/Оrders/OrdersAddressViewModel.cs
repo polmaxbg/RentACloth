@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using RentACloth.Services.Models.Addresses;
 
-namespace RentACloth.Controllers
+namespace RentACloth.Models.Оrders
 {
     public class OrdersAddressViewModel
     {

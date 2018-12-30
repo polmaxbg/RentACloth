@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RentACloth.Common;
 using RentACloth.Data.Models;
+using RentACloth.Data.Models.Enums;
 using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
 
@@ -27,6 +28,12 @@ namespace RentACloth.Services
         {
             var product = this.productRepository.All().FirstOrDefault(m => m.Id == id);
             return product;
+        }
+
+        public void AddProduct(Product product)
+        {
+            this.productRepository.Add(product);
+            this.productRepository.SaveChanges();
         }
     }
 }
