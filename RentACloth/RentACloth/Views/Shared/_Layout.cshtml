@@ -1,4 +1,5 @@
-﻿@*<!DOCTYPE html>
+﻿@using RentACloth.Data.Models
+@*<!DOCTYPE html>
     <html>
     <head>
         <meta charset="utf-8" />
@@ -73,6 +74,7 @@
         @RenderSection("Scripts", required: false)
     </body>
     </html>*@
+@inject UserManager<RentAClothUser> UserManager
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,31 +99,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Rent A Cloth</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllShoes" class="nav-link">Обувки</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
-                    <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-item"><a asp-area="" asp-controller="Orders" asp-action="MyOrders" class="nav-link">Моите поръчки</a></li>
-                        if (User.IsInRole("Admin"))
-                        {
-                        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="CreateProduct" class="nav-link">Добавяне на продукт</a></li>
-
-                        }
-                    }
-                </ul>
-                <partial name="_LoginPartial" />
-            </div>
+                <partial name="_NavbarPartial.cshtml" />
         </div>
     </nav>
     <!-- Page Content -->
@@ -131,7 +109,7 @@
         </div>
     </main>
     <!-- /.container -->
-<!-- Footer -->
+    <!-- Footer -->
     <hr />
     <footer class="py-2 bg-dark">
         <div class="container">

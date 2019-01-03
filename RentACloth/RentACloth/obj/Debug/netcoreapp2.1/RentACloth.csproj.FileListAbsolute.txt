@@ -84,3 +84,15 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Add.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\All.g.cshtml.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Categories\Edit.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\ChildCategories\Add.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\ChildCategories\All.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\ChildCategories\Edit.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Administration\Views\_ViewImports.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Administration\Views\_ViewStart.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminNavbarPartial.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutAdmin.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_NavbarPartial.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Areas\Administration\Views\Home\Index.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\All.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\CreateProduct.g.cshtml.cs
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Products\Edit.g.cshtml.cs

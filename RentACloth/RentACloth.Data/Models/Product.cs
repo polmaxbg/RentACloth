@@ -19,12 +19,10 @@ namespace RentACloth.Data.Models
         public string Size { get; set; }
 
         public string BrandName { get; set; }
-        public Brand Brand { get; set; }
-        public int BrandId { get; set; }
 
         public string CategoryName { get; set; }
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
+        public ChildCategory ChildCategory { get; set; }
+        public int ChildCategoryId { get; set; }
 
 
         public virtual ICollection<ShoppingBagProduct> ShoppingBagProducts { get; set; } = new HashSet<ShoppingBagProduct>();

@@ -4,6 +4,5 @@ namespace RentACloth.Data.Models.Entities
 {
     public class Cloth : Product
     {
-        public ClothType ClothType { get; set; }
     }
 }

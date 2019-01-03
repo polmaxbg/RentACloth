@@ -154,23 +154,6 @@ namespace RentACloth.Data.Migrations
                     b.ToTable("Addresses");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Brand");
-                });
-
             modelBuilder.Entity("RentACloth.Data.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -190,7 +173,7 @@ namespace RentACloth.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryId");
+                    b.Property<int?>("CategoryId");
 
                     b.Property<string>("Name");
 
@@ -267,15 +250,13 @@ namespace RentACloth.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BrandId");
-
                     b.Property<string>("BrandName");
 
                     b.Property<int>("CategoryId");
 
                     b.Property<string>("CategoryName");
 
-                    b.Property<int?>("ChildCategoryId");
+                    b.Property<int>("ChildCategoryId");
 
                     b.Property<string>("Description");
 
@@ -293,8 +274,6 @@ namespace RentACloth.Data.Migrations
                     b.Property<string>("Size");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
 
@@ -405,7 +384,6 @@ namespace RentACloth.Data.Migrations
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
-                    b.Property<int>("ClothType");
 
                     b.ToTable("Cloth");
 
@@ -484,20 +462,11 @@ namespace RentACloth.Data.Migrations
                         .HasForeignKey("RentAClothUserId1");
                 });
 
-            modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
-                {
-                    b.HasOne("RentACloth.Data.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("RentACloth.Data.Models.ChildCategory", b =>
                 {
-                    b.HasOne("RentACloth.Data.Models.Category", "Category")
+                    b.HasOne("RentACloth.Data.Models.Category")
                         .WithMany("ChildCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CategoryId");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.Order", b =>
@@ -526,19 +495,15 @@ namespace RentACloth.Data.Migrations
 
             modelBuilder.Entity("RentACloth.Data.Models.Product", b =>
                 {
-                    b.HasOne("RentACloth.Data.Models.Brand", "Brand")
-                        .WithMany()
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("RentACloth.Data.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("RentACloth.Data.Models.ChildCategory")
+                    b.HasOne("RentACloth.Data.Models.ChildCategory", "ChildCategory")
                         .WithMany("Products")
-                        .HasForeignKey("ChildCategoryId");
+                        .HasForeignKey("ChildCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.RentAClothUser", b =>

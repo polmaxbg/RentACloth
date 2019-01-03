@@ -43,9 +43,14 @@ namespace RentACloth.Data
                 .HasValue<Cloth>("Cloth")
                 .HasValue<Shoe>("Shoe")
                 .HasValue<Accessories>("Accessories")
-                .HasValue<Watch>("Watch");
+                .HasValue<Watch>("Watch")
+                ;
+
+            //builder.Entity<ChildCategory>().HasOne(x => x.Product).WithMany(c => c.ChildCategories);
 
             builder.Entity<ShoppingBagProduct>().HasKey(x => new { x.ProductId, x.ShoppingBagId });
+
+
 
             builder.Entity<ShoppingBag>()
                 .HasOne(x => x.RentAClothUser)

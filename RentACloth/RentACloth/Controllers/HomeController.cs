@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using RentACloth.Controllers;
 using RentACloth.Models;
 
-namespace RentACloth.Web.Controllers
+namespace RentACloth.Controllers
 {
     public class HomeController : BaseController
     {

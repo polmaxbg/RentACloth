@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using RentACloth.Data.Models;
+using RentACloth.Data.Models.Entities;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
+using RentACloth.Services.Mapping;
 using RentACloth.Services.Models.Home;
 
 namespace RentACloth.Controllers
@@ -18,6 +23,7 @@ namespace RentACloth.Controllers
         private readonly IAccessoriesService accessoriesService;
         private readonly IWatchesService watchesService;
         private readonly IProductService productService;
+        private const string ADMIN_ROLE = "Admin";
 
 
 
@@ -74,6 +80,13 @@ namespace RentACloth.Controllers
             return this.View(viewModel);
         }
 
+        public IActionResult All()
+        {
+            var products = this.productService.GetAllProducts();
+
+            return View(products);
+        }
+
         public IActionResult Details(int id)
         {
             var product = this.productService.GetProductById<ProductDetailsViewModel>(id);
@@ -86,28 +99,142 @@ namespace RentACloth.Controllers
             return View(product);
         }
 
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = ADMIN_ROLE)]
         public IActionResult CreateProduct()
         {
-            return this.View();
+            var childCategories = this.productService.GetChildCategories();
+
+            var categories = childCategories.Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            }).ToList();
+
+            var model = new CreateProductViewModel { ChildCategories = categories };
+
+            return View(model);
         }
 
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = ADMIN_ROLE)]
         [HttpPost]
         public IActionResult CreateProduct(CreateProductViewModel model)
         {
-            return this.View();
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+            var product = Mapper.Map<Product>(model);
+
+            this.productService.AddProduct(product);
+
+            return RedirectToAction(nameof(All));
+
+        }
+
+        [Authorize(Roles = ADMIN_ROLE)]
+        public IActionResult Edit(int id)
+        {
+            var product = this.productService.GetProduct(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var childCategories = this.productService.GetChildCategories();
+
+            ViewData["ChildCategoryId"] = childCategories.Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            }).ToList();
+
+            var model = Mapper.Map<EditProductViewModel>(product);
+
+            return View(model);
+        }
+
+        [Authorize(Roles = ADMIN_ROLE)]
+        [HttpPost]
+        public IActionResult Edit(EditProductViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                //TODO:Check
+                var childCategories = this.productService.GetChildCategories();
+
+                ViewData["ChildCategoryId"] = childCategories.Select(x => new SelectListItem
+                {
+                    Value = x.Id.ToString(),
+                    Text = x.Name
+                }).ToList();
+
+                return View(model);
+            }
+
+            var product = Mapper.Map<Product>(model);
+
+            this.productService.EditProduct(product);
+
+            //if (model.FormImages != null)
+            //{
+            //    int existingImages = productService.GetImages(product.Id).Count();
+            //    var imageUrls = await this.imageService.UploadImages(model.FormImages.ToList(), existingImages,
+            //        GlobalConstans.PRODUCT_PATH_TEMPLATE, product.Id);
+
+            //    this.productService.AddImageUrls(product.Id, imageUrls);
+            //}
+
+            return RedirectToAction(nameof(All));
+        }
+        public IActionResult Delete(int id)
+        {
+            this.productService.RemoveProduct(id);
+            return this.RedirectToAction(nameof(All));
         }
     }
 
-    public class CreateProductViewModel
+    public class EditProductViewModel : IMapFrom<Product>, IMapTo<Product>, IHaveCustomMappings
     {
-        public string ProductName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
         public string Size { get; set; }
         public string ProductType { get; set; }
         public string EventType { get; set; }
-        public string S { get; set; }
+        public int ChildCategoryId { get; set; }
+        public string BrandName { get; set; }
+
+        public void CreateMappings(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<Product, EditProductViewModel>()
+                .ForMember(x => x.Name, x => x.MapFrom(y => y.Name))
+                .ForMember(x => x.ProductType, x => x.MapFrom(y => y.ProductType))
+                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType))
+                .ForMember(x=>x.BrandName,x=>x.MapFrom(y=>y.BrandName));
+        }
+    }
+
+    public class CreateProductViewModel:IMapFrom<Product>,IMapTo<Product>,IMapFrom<Cloth>,IMapTo<Cloth>,IHaveCustomMappings
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Description { get; set; }
+        public string Size { get; set; }
+        public string ProductType { get; set; }
+        public string EventType { get; set; }
+        public string BrandName { get; set; }
+
+        public int ChildCategoryId { get; set; }
+        public ICollection<SelectListItem> ChildCategories { get; set; }
+        public void CreateMappings(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<Product, CreateProductViewModel>()
+                .ForMember(x => x.Name, x => x.MapFrom(y => y.Name))
+                .ForMember(x => x.ProductType, x => x.MapFrom(y => y.ProductType))
+                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType))
+                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
+        }
     }
 }

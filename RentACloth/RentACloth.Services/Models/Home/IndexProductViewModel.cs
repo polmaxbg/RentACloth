@@ -20,26 +20,26 @@ namespace RentACloth.Services.Models.Home
         {
             configuration.CreateMap<Shoe, IndexProductViewModel>()
                 .ForMember(x => x.EvenType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Category.Name))
-                .ForMember(x=>x.BrandName,x=>x.MapFrom(y=>y.Brand.Name));
+                //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name))
+                .ForMember(x=>x.BrandName,x=>x.MapFrom(y=>y.BrandName));
 
 
             configuration.CreateMap<Cloth, IndexProductViewModel>()
                 .ForMember(x => x.EvenType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Category.Name))
-                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.Brand.Name));
+                //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name))
+                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
 
 
             configuration.CreateMap<Accessories, IndexProductViewModel>()
                 .ForMember(x => x.EvenType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Category.Name))
-                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.Brand.Name));
+                //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name))
+                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
 
 
             configuration.CreateMap<Watch, IndexProductViewModel>()
                 .ForMember(x => x.EvenType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Category.Name))
-                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.Brand.Name));
+                //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name))
+                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
 
 
             //configuration.CreateMap<Shoe, IndexProductViewModel>()

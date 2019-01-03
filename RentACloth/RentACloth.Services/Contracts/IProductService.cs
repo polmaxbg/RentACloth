@@ -9,8 +9,10 @@ namespace RentACloth.Services.Contracts
     {
         TViewModel GetProductById<TViewModel>(int id);
         Product GetProduct(int id);
-
+        IEnumerable<ChildCategory> GetChildCategories();
+        IEnumerable<Product> GetAllProducts();
         void AddProduct(Product product);
-
+        void EditProduct(Product product);
+        void RemoveProduct(int productId);
     }
 }

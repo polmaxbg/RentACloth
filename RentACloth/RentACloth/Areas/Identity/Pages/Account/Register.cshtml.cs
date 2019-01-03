@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using RentACloth.Data.Models;
+using RentACloth.Services.Contracts;
 
 namespace RentACloth.Web.Areas.Identity.Pages.Account
 {
@@ -20,18 +21,19 @@ namespace RentACloth.Web.Areas.Identity.Pages.Account
         private readonly UserManager<RentAClothUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IShoppingBagService shoppingBagService;
 
-        public RegisterModel(
-            UserManager<RentAClothUser> userManager,
-            SignInManager<RentAClothUser> signInManager,
-            ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+
+        public RegisterModel(SignInManager<RentAClothUser> signInManager, UserManager<RentAClothUser> userManager, ILogger<RegisterModel> logger, IEmailSender emailSender, IShoppingBagService shoppingBagService)
         {
-            _userManager = userManager;
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
             _emailSender = emailSender;
+            this.shoppingBagService = shoppingBagService;
         }
+
+        
 
         [BindProperty]
         public InputModel Input { get; set; }
@@ -77,7 +79,11 @@ namespace RentACloth.Web.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new RentAClothUser { UserName = Input.Email, Email = Input.Email };
+                var user = new RentAClothUser { UserName = Input.Email, Email = Input.Email,
+                    FirstName = Input.FirstName,
+                    LastName = Input.LastName,
+                    ShoppingBag = new ShoppingBag()
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

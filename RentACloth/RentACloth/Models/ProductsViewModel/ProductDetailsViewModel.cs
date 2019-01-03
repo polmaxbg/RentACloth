@@ -23,8 +23,8 @@ namespace RentACloth.Models.ProductsViewModel
         {
 
             configuration.CreateMap<Product, ProductDetailsViewModel>()
-                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Category.Name));
+                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType));
+            //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name));
 
             //configuration.CreateMap<Cloth, ProductDetailsViewModel>()
             //    .ForMember(x => x.Size, x => x.MapFrom(y => y.Size));
