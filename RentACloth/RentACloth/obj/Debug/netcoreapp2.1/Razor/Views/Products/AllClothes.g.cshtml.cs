@@ -160,7 +160,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("</td>\r\n            <th>");
             EndContext();
             BeginContext(918, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e4ad471aa514e258f1ae1ffc0c6624f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1b2cf8b1937496ea8b46dce98836159", async() => {
                 BeginContext(1007, 7, true);
                 WriteLiteral("Details");
                 EndContext();

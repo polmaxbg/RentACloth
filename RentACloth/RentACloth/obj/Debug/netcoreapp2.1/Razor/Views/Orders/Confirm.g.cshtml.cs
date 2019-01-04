@@ -124,7 +124,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("</div>\r\n            <hr />\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <div class=\"text-center mt-4\">\r\n            ");
             EndContext();
             BeginContext(914, 142, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b215d4380fd4026b0674ac070b82d07", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e9a3b2ab42242f99a117a985d0881e1", async() => {
                 BeginContext(1005, 47, true);
                 WriteLiteral("<i class=\"fas fa-check\"></i> Потвърди поръчката");
                 EndContext();

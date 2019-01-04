@@ -6,3 +6,4 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreap
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.AssemblyInfo.cs
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.csprojAssemblyReference.cache

@@ -76,7 +76,7 @@ namespace RentACloth.Controllers
         {
             if (!this.categoryService.DeleteCategory(id))
             {
-                this.TempData["error"] = "Не може да изтриете главна категория, защото съдържа други категории.";
+                TempData["error"] = "Не може да изтриете главна категория, защото съдържа други категории.";
             }
 
             return RedirectToAction(nameof(All));

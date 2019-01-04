@@ -42,7 +42,6 @@ namespace RentACloth
                 typeof(EditChildCategoryViewModel).Assembly,
                 typeof(AllChildCategoryViewModel).Assembly,
                 typeof(EditProductViewModel).Assembly
-                
              );
 
             services.Configure<CookiePolicyOptions>(options =>

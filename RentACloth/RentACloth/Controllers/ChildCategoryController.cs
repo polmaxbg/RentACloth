@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using RentACloth.Common;
 using RentACloth.Data.Models;
 using RentACloth.Services.Contracts;
+using RentACloth.Services.Mapping;
 
 namespace RentACloth.Controllers
 {
@@ -139,12 +140,17 @@ namespace RentACloth.Controllers
         public int ChildCategoriesCount { get; set; }
     }
 
-    public class AllChildCategoryViewModel
+    public class AllChildCategoryViewModel:IMapFrom<Category>,IMapTo<Category>,IHaveCustomMappings
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string CategoryName { get; set; }
         public int ProductsCount { get; set; }
+        public void CreateMappings(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<Category, AllChildCategoryViewModel>()
+                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Name));
+        }
     }
 
     public class AddChildCategoryViewModel
@@ -163,7 +169,7 @@ namespace RentACloth.Controllers
         public ICollection<Category> Categories { get; set; }
     }
 
-    public class EditChildCategoryViewModel
+    public class EditChildCategoryViewModel:IMapFrom<ChildCategory>,IMapTo<ChildCategory>
     {
         public int Id { get; set; }
 
@@ -173,7 +179,7 @@ namespace RentACloth.Controllers
         
 
         [Required(ErrorMessage = "Изберете {0}!")]
-        [Display(Name = "Главна категория")]
+        [Display(Name = "Основна категория")]
         public int? CategoryId { get; set; }
 
         public ICollection<Category> Categories { get; set; }

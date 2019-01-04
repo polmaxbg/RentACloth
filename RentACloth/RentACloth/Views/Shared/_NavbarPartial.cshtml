@@ -1,12 +1,12 @@
-﻿<a class="navbar-brand" href="#">Rent A Cloth</a>
+﻿<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Rent A Cloth</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        @*<li class="nav-item active">
             <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
-        </li>
+        </li>*@
         <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
         <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllShoes" class="nav-link">Обувки</a></li>
         <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
@@ -20,7 +20,16 @@
                     <a class="nav-link text-white" asp-area="Administration" asp-controller="Home" asp-action="Index"> Administration</a>
                 </li>*@
                 <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="All" class="nav-link">Всички продукти</a></li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Категории
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a asp-controller="Category" asp-action="All" class="dropdown-item nav-link text-dark">Основни категории</a>
+                        <a asp-controller="ChildCategory" asp-action="All" class="dropdown-item nav-link text-dark">Под категории</a>
+                    </div>
+                </li>
+                
             }
         }
     </ul>

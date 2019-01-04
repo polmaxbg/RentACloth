@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using RentACloth.Common;
 using RentACloth.Data;
 using RentACloth.Data.Models;
@@ -24,7 +25,7 @@ namespace RentACloth.Services
         public IEnumerable<ChildCategory> GetChildCategories()
         {
             //TODO:Виж дали взима и продуктите
-            var childCategories = this.childCategoryRepository.All();
+            var childCategories = this.childCategoryRepository.All().Include(x=>x.Products).Include(x=>x.Category);
             return childCategories;
         }
 
@@ -66,11 +67,12 @@ namespace RentACloth.Services
 
         public bool DeleteChildCategory(int id)
         {
-            var category = this.childCategoryRepository.All().FirstOrDefault(x => x.Id == id);
+            var category = this.childCategoryRepository.All().Include(x=>x.Products).FirstOrDefault(x => x.Id == id);
 
             if (category == null || category.Products.Any())
             {
-                throw new InvalidOperationException("There is no category with this id");
+                //throw new InvalidOperationException("There is no category with this id");
+                return false;
             }
 
             this.db.ChildCategories.Remove(category);
