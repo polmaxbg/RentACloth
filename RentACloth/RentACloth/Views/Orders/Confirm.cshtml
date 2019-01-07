@@ -1,4 +1,5 @@
-﻿@model RentACloth.Models.Оrders.ConfirmOrderViewModel
+﻿@using RentACloth.Components
+@model RentACloth.Models.Оrders.ConfirmOrderViewModel
 
 @{
     ViewData["Title"] = "Потвърди поръчката";
@@ -6,9 +7,10 @@
 
 }
 
-<div class="h3 text-center mb-3">@ViewData["Title"]</div>
+<div class="h3 text-center mb-3 text-info">@ViewData["Title"]</div>
+<hr />
 <div class="progress mb-3">
-    <div class="progress-bar" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="66">66%</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
 </div>
 
 <div class="row">
@@ -22,9 +24,12 @@
             <hr />
         </div>
     </div>
+
     <div class="col-md-6">
+        @await Component.InvokeAsync(typeof(FullShoppingBagDetailsComponent))
+
         <div class="text-center mt-4">
-            <a asp-area="" asp-controller="Orders" asp-action="Complete" class="btn btn-danger btn-lg"><i class="fas fa-check"></i> Потвърди поръчката</a>
+            <a asp-area="" asp-controller="Orders" asp-action="Complete" class="btn btn-danger btn-lg"><i class="fa fa-check"></i> Потвърди поръчката</a>
         </div>
     </div>
 </div>

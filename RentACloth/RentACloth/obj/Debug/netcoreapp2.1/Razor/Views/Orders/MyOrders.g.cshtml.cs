@@ -148,7 +148,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral(" лв.\r\n                    </td>\r\n                    <td class=\"col-md-2 d-flex justify-content-around\">\r\n                        <div class=\"mr-2\">\r\n                            ");
             EndContext();
             BeginContext(1900, 149, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f94630345a34c698d40d979484ce129", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47a1279c5c6a49d0b0227d5a6813e00a", async() => {
                 BeginContext(2032, 13, true);
                 WriteLiteral(" Към продукта");
                 EndContext();

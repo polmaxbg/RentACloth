@@ -159,7 +159,7 @@ WriteAttributeValue("", 1353, product.ImageUrl, 1353, 17, false);
             WriteLiteral(" лв.\r\n                            </td>\r\n                            <td class=\"col-1 d-flex justify-content-center\">\r\n                                ");
             EndContext();
             BeginContext(2223, 142, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec91e96441984889af18acf72e31e76d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "044d82a73dec4bfea300b22b20d6dbda", async() => {
                 BeginContext(2327, 34, true);
                 WriteLiteral("<i class=\"fa fa-times-circle\"></i>");
                 EndContext();
@@ -222,7 +222,7 @@ WriteAttributeValue("", 1353, product.ImageUrl, 1353, 17, false);
             WriteLiteral("        <div class=\"row\">\r\n            <div class=\"col-6\">\r\n                ");
             EndContext();
             BeginContext(2779, 121, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be4d1f3c54074fff8a6f9cd85e587501", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e4cfa041daf344e38fe949afbbbc3b13", async() => {
                 BeginContext(2885, 11, true);
                 WriteLiteral("Виж количка");
                 EndContext();

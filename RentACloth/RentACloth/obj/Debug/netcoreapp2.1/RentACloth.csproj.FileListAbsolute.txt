@@ -101,3 +101,4 @@ C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Re
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.csproj.CopyComplete
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\RentACloth.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\FullShoppingBagDetailsComponent\Default.g.cshtml.cs

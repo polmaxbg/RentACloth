@@ -43,8 +43,8 @@ namespace RentACloth.Services
 
         public void AddAddressToUser(string username, Address address)
         {
-            //var user = this.userService.GetUserByUsername(username);
-            //user.Addresses.Add(address);
+            var user = this.userService.GetUserByUsername(username);
+            user.Addresses.Add(address);
 
             this.addressRepository.SaveChanges();
         }

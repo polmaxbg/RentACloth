@@ -59,7 +59,7 @@ namespace RentACloth.Controllers
                 PhoneNumber = user.PhoneNumber
             };
 
-            return this.View();
+            return this.View(createOrderViewModel);
         }
 
         [Authorize]
