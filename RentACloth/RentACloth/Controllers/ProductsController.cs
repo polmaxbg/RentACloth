@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RentACloth.Data.Models;
 using RentACloth.Data.Models.Entities;
+using RentACloth.Models.Home;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
@@ -225,6 +226,7 @@ namespace RentACloth.Controllers
         public string ProductType { get; set; }
         public string EventType { get; set; }
         public string BrandName { get; set; }
+        public string ImageUrl { get; set; }
 
         public int ChildCategoryId { get; set; }
         public ICollection<SelectListItem> ChildCategories { get; set; }

@@ -32,7 +32,8 @@ namespace RentACloth.Controllers
                 Name = x.Product.Name,
                 Price = x.Product.Price,
                 Quantity = x.Quantity,
-                TotalPrice = x.Quantity * x.Product.Price
+                TotalPrice = x.Quantity * x.Product.Price,
+                ImageUrl = x.Product.ImageUrl
             });
 
 

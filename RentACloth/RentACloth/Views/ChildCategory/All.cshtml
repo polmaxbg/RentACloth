@@ -2,18 +2,20 @@
 @model RentACloth.Controllers.AllCategoriesViewModel
 @{
     ViewData["Title"] = "Под категории";
+    Layout = "_LayoutClear";
+
 }
-<div class="container">
-    <div class="mobile-fondsize-20 h2">@ViewData["Title"]</div>
-    <p><a asp-controller="ChildCategory" asp-action="Add" class="btn btn-success">Създай новa под категория</a></p>
+
+<div class="mobile-fondsize-20 h2 mt-3 text-center text-info">@ViewData["Title"]</div>
+<div class="container mt-4">
     <table class="table table-hover">
         <thead>
-            <tr class="row">
+            <tr class="row  d-flex justify-content-center">
                 <th scope="col" class="col-lg-1 d-flex justify-content-center">Номер</th>
                 <th scope="col" class="col-lg-2 d-flex justify-content-center">Име</th>
                 <th scope="col" class="col-lg-3 d-flex justify-content-center">Основна категории</th>
                 <th scope="col" class="col-lg-1 d-flex justify-content-center">Брой продукти</th>
-                <th scope="col" class="col-lg-3 d-flex justify-content-center"></th>
+                <th scope="col" class="col-lg-3 d-flex justify-content-center"><p><a asp-controller="ChildCategory" asp-action="Add" class="btn btn-success">Създай новa под категория</a></p></th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +23,7 @@
             @foreach (var category in Model.ChildCategoryViewModel)
             {
                 count++;
-                <tr class="row">
+                <tr class="row  d-flex justify-content-center">
                     <td class="col-lg-1 d-flex justify-content-center">@count</td>
                     <td class="col-lg-2 d-flex justify-content-center">@category.Name</td>
                     <td class="col-lg-3 d-flex justify-content-center">@category.CategoryName</td>

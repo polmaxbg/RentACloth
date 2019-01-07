@@ -1,35 +1,93 @@
 ﻿@model RentACloth.Models.ProductsViewModel.ProductDetailsViewModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Детайли на продукт";
+    Layout = "_LayoutClear";
 }
 
-<h2>Details</h2>
-<div class="mx-auto w-50">
-    <table class="table-hover table table-striped">
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Brand Name</th>
-            <th>Event Type</th>
-            @if (@Model.CategoryName == "Shoes" || @Model.CategoryName == "Clothes")
-            {
-                <th>Size</th>
-            }
-        </tr>
-       
-        <tr>
-            <td>@Model.Name</td>
-            <td>@Model.Price</td>
-            <td>@Model.Description</td>
-            <td>@Model.BrandName</td>
-            <td>@Model.EventType</td>
-            @if (@Model.CategoryName == "Shoes" || @Model.CategoryName == "Clothes")
-            {
-                <td>@Model.Size</td>
-            }
-            <th><a asp-area="" asp-controller="ShoppingBag" asp-action="Add" asp-route-id="@Model.Id">Rent A Cloth</a></th>
-        </tr>
-    </table>
-</div>
+
+<div class="mobile-fondsize-20 h2 mt-4 text-center text-info">@ViewData["Title"]</div>
+<hr />
+
+<div class="card mt-4 border-0">
+    <div class="row">
+        <aside class="col-sm-5 border-right">
+            <article class="gallery-wrap">
+                <div class="img-small-wrap">
+                    <div> <a href="#"><img src="@Model.ImageUrl"></a></div>
+                </div> <!-- slider-product.// -->
+
+            </article> <!-- gallery-wrap .end// -->
+        </aside>
+        <aside class="col-sm-7">
+            <article class="card-body p-5">
+                <h3 class="title mb-3">Име на продукта: @Model.Name</h3>
+                <h4 class="title mb-3">Марка: @Model.BrandName</h4>
+
+                <p class="price-detail-wrap">
+                    <span class="price h3 text-warning">
+                        <span class="currency"></span>Цена: <span class="num">@Model.Price лв.</span>
+                    </span>
+                </p> <!-- price-detail-wrap .// -->
+                <dl class="item-property">
+                    <dt>Oписание:</dt>
+                    <dd>
+                        <p>
+                            @Model.Description
+                        </p>
+                    </dd>
+                </dl>
+                <dl class="param param-feature">
+                    <dt>Номер на продукта:</dt>
+                    <dd>@Model.Id</dd>
+                </dl>  <!-- item-property-hor .// -->
+
+                <dl class="param param-feature">
+                    <dt>Доставка:</dt>
+                    <dd>Работим с куриерска фирма Speedy. Доставките се правят само на територията на град София в рамките на деня.</dd>
+                </dl>  <!-- item-property-hor .// -->
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <dl class="param param-inline">
+                            <dt>Размер: </dt>
+                            <dd>
+                                @if (@Model.CategoryName == "Shoes")
+                                {
+                                    <label for="inlineRadio2" class="form-check form-check-inline">
+                                        <select class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            <option class="form-check-label" value="37">37</option>
+                                            <option class="form-check-label" value="37">38</option>
+                                            <option class="form-check-label" value="37">39</option>
+                                            <option class="form-check-label" value="37">40</option>
+                                            <option class="form-check-label" value="37">41</option>
+                                            <option class="form-check-label" value="37">42</option>
+                                        </select>
+                                    </label>
+                                }
+                                else if (@Model.CategoryName == "Clothes")
+                                {
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <span class="form-check-label">S</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <span class="form-check-label">M</span>
+                                    </label>
+                                    <label class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <span class="form-check-label">L</span>
+                                    </label>
+                                }
+                            </dd>
+                        </dl>  <!-- item-property .// -->
+                    </div> <!-- col.// -->
+                </div> <!-- row.// -->
+                <hr>
+                <a asp-controller="ShoppingBag" asp-action="Add" asp-route-id="@Model.Id" class="btn btn-lg btn-primary text-uppercase"><i class="fa fa-credit-card"></i> Rent A Cloth </a>
+                <a asp-controller="ShoppingBag" asp-action="Add" asp-route-id="@Model.Id" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fa fa-shopping-cart"></i> Add to cart </a>
+            </article> <!-- card-body.// -->
+        </aside> <!-- col.// -->
+    </div> <!-- row.// -->
+</div> <!-- card.// -->

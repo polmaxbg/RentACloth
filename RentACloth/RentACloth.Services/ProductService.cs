@@ -46,6 +46,12 @@ namespace RentACloth.Services
             return this.productRepository.All().Include(x=>x.ChildCategory).ThenInclude(x=>x.Category);
         }
 
+        public IEnumerable<Product> GetProductsByCategory(int? childCategoryId)
+        {
+            return db.Products.Where(x => x.ChildCategory.Id == childCategoryId)
+                .Include(p => p.ChildCategory);
+        }
+
         public void AddProduct(Product product)
         {
             this.productRepository.Add(product);

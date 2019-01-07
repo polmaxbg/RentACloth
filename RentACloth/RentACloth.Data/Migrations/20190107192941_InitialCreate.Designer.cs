@@ -10,8 +10,8 @@ using RentACloth.Data;
 namespace RentACloth.Data.Migrations
 {
     [DbContext(typeof(RentAClothContext))]
-    [Migration("20190102145701_InitialCreateLast")]
-    partial class InitialCreateLast
+    [Migration("20190107192941_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -143,34 +143,15 @@ namespace RentACloth.Data.Migrations
 
                     b.Property<string>("Country");
 
-                    b.Property<int>("RentAClothUserId");
-
-                    b.Property<string>("RentAClothUserId1");
+                    b.Property<string>("RentAClothUserId");
 
                     b.Property<string>("Street");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RentAClothUserId1");
+                    b.HasIndex("RentAClothUserId");
 
                     b.ToTable("Addresses");
-                });
-
-            modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Brand");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.Category", b =>
@@ -269,8 +250,6 @@ namespace RentACloth.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BrandId");
-
                     b.Property<string>("BrandName");
 
                     b.Property<string>("CategoryName");
@@ -280,6 +259,8 @@ namespace RentACloth.Data.Migrations
                     b.Property<string>("Description");
 
                     b.Property<int>("EventType");
+
+                    b.Property<string>("ImageUrl");
 
                     b.Property<string>("Name");
 
@@ -293,8 +274,6 @@ namespace RentACloth.Data.Migrations
                     b.Property<string>("Size");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
 
                     b.HasIndex("ChildCategoryId");
 
@@ -403,7 +382,6 @@ namespace RentACloth.Data.Migrations
                 {
                     b.HasBaseType("RentACloth.Data.Models.Product");
 
-                    b.Property<int>("ClothType");
 
                     b.ToTable("Cloth");
 
@@ -479,15 +457,7 @@ namespace RentACloth.Data.Migrations
                 {
                     b.HasOne("RentACloth.Data.Models.RentAClothUser", "RentAClothUser")
                         .WithMany("Addresses")
-                        .HasForeignKey("RentAClothUserId1");
-                });
-
-            modelBuilder.Entity("RentACloth.Data.Models.Brand", b =>
-                {
-                    b.HasOne("RentACloth.Data.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RentAClothUserId");
                 });
 
             modelBuilder.Entity("RentACloth.Data.Models.ChildCategory", b =>
@@ -524,11 +494,6 @@ namespace RentACloth.Data.Migrations
 
             modelBuilder.Entity("RentACloth.Data.Models.Product", b =>
                 {
-                    b.HasOne("RentACloth.Data.Models.Brand", "Brand")
-                        .WithMany()
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("RentACloth.Data.Models.ChildCategory", "ChildCategory")
                         .WithMany("Products")
                         .HasForeignKey("ChildCategoryId")

@@ -1,0 +1,24 @@
+﻿@model RentACloth.Models.Home.IndexViewModel
+
+
+
+<h1 class="my-4">Rent A Cloth</h1>
+
+@foreach (var parentCategory in Model.CategoriesViewModel)
+{
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <h5 class="nav-link font-weight-bold mb-0 bg-info">@parentCategory.Name</h5>
+    </li>
+    @foreach (var childCategory in parentCategory.ChildCategories)
+    {
+        <li class="nav-item bg-light">
+            <a asp-controller="Home" asp-action="Index" asp-route-childCategoryId="@childCategory.Id" class="nav-link pl-5 text-success">--- @childCategory.Name</a>
+        </li>
+    }
+</ul>
+}
+
+
+
+

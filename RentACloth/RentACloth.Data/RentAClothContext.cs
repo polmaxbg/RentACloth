@@ -46,8 +46,6 @@ namespace RentACloth.Data
                 .HasValue<Watch>("Watch")
                 ;
 
-            //builder.Entity<ChildCategory>().HasOne(x => x.Product).WithMany(c => c.ChildCategories);
-
             builder.Entity<ShoppingBagProduct>().HasKey(x => new { x.ProductId, x.ShoppingBagId });
 
 

@@ -7,6 +7,8 @@ namespace RentACloth.Services.Contracts
 {
     public interface IUserService
     {
+        string GetCurrentUserUsername();
+
         RentAClothUser GetUserByUsername(string username);
     }
 }

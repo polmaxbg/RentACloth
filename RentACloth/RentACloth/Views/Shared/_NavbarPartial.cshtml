@@ -1,4 +1,5 @@
-﻿<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Rent A Cloth</a>
+﻿@using RentACloth.Components
+<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Rent A Cloth</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
@@ -7,10 +8,9 @@
         @*<li class="nav-item active">
             <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
         </li>*@
-        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
-        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllShoes" class="nav-link">Обувки</a></li>
+        @*<li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
         <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
-        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>
+        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>*@
         @if (User.Identity.IsAuthenticated)
         {
             <li class="nav-item"><a asp-area="" asp-controller="Orders" asp-action="MyOrders" class="nav-link">Моите поръчки</a></li>

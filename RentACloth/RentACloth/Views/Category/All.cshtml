@@ -2,38 +2,40 @@
 
 @{
     ViewData["Title"] = "Основни категории";
+    Layout = "_LayoutClear";
+
 }
 
-<div class="container">
-    <div class="mobile-fondsize-20 h2">@ViewData["Title"]</div>
-    <p><a asp-controller="Category" asp-action="Add" class="btn btn-success">Създай новa</a></p>
+<div class="mobile-fondsize-20 h2 mt-3 text-center text-info">@ViewData["Title"]</div>
+
+<div class="container mt-4">
     <table class="table table-hover">
         <thead>
-        <tr class="row">
-            <th scope="col" class="col-lg-1 d-flex justify-content-center">Номер</th>
-            <th scope="col" class="col-lg-1 d-flex justify-content-center">ID</th>
-            <th scope="col" class="col-lg-3 d-flex justify-content-center">Име</th>
-            <th scope="col" class="col-lg-3 d-flex justify-content-center">Брой под категории</th>
-            <th scope="col" class="col-lg-3 d-flex justify-content-center"></th>
-        </tr>
+            <tr class="row">
+                <th scope="col" class="col-lg-1 d-flex justify-content-center">Номер</th>
+                <th scope="col" class="col-lg-1 d-flex justify-content-center">ID</th>
+                <th scope="col" class="col-lg-3 d-flex justify-content-center">Име</th>
+                <th scope="col" class="col-lg-3 d-flex justify-content-center">Брой под категории</th>
+                <th scope="col" class="col-lg-3 d-flex justify-content-center"><p><a asp-controller="Category" asp-action="Add" class="btn btn-success">Създай новa</a></p></th>
+            </tr>
         </thead>
         <tbody>
 
-        @{var count = 0; }
-        @foreach (var category in Model)
-        {
-            count++;
-            <tr class="row">
-                <td class="col-lg-1 d-flex justify-content-center">@count</td>
-                <td class="col-lg-1 d-flex justify-content-center">@category.Id</td>
-                <td class="col-lg-3 d-flex justify-content-center">@category.Name</td>
-                <td class="col-lg-3 d-flex justify-content-center">@category.ChildCategoriesCount</td>
-                <td class="col-lg-3 d-flex justify-content-around">
-                    <a asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary">Промени</a>
-                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">Изтрий</a>
-                </td>
-            </tr>
-        }
+            @{var count = 0; }
+            @foreach (var category in Model)
+            {
+                count++;
+                <tr class="row">
+                    <td class="col-lg-1 d-flex justify-content-center">@count</td>
+                    <td class="col-lg-1 d-flex justify-content-center">@category.Id</td>
+                    <td class="col-lg-3 d-flex justify-content-center">@category.Name</td>
+                    <td class="col-lg-3 d-flex justify-content-center">@category.ChildCategoriesCount</td>
+                    <td class="col-lg-3 d-flex justify-content-around">
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary">Промени</a>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">Изтрий</a>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

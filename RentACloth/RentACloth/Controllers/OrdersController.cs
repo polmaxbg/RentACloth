@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ using RentACloth.Services.Mapping;
 
 namespace RentACloth.Controllers
 {
-    public class OrdersController:BaseController
+    public class OrdersController : BaseController
     {
         private const string ERROR_MESSAGE = "Моля добавете продукти в кошницата!";
         private const int DELIVERY_PRICE = 5;
@@ -25,7 +26,7 @@ namespace RentACloth.Controllers
         private readonly IMapper mapper;
         private readonly IRepository<OrderProduct> orderProductRepository;
 
-        public OrdersController(IAddressService adressesService, IUserService userService, IOrderService orderService, IShoppingBagService shoppingBagService,  IRepository<OrderProduct> orderProductRepository)
+        public OrdersController(IAddressService adressesService, IUserService userService, IOrderService orderService, IShoppingBagService shoppingBagService, IRepository<OrderProduct> orderProductRepository)
         {
             this.adressesService = adressesService;
             this.userService = userService;
@@ -43,12 +44,9 @@ namespace RentACloth.Controllers
             }
 
             var order = this.orderService.CreateOrder(this.User.Identity.Name);
-            var address= this.adressesService.GetAllAddressByUser(this.User.Identity.Name);
+            var address = this.adressesService.GetAllAddressByUser(this.User.Identity.Name);
 
-            var viewModel = new OrdersAddressViewModel()
-            {
-                Addresses = address
-            };
+            var viewModel = Mapper.Map<IList<OrdersAddressViewModel>>(address);
 
             var user = this.userService.GetUserByUsername(this.User.Identity.Name);
             var fullName = $"{user.FirstName} {user.LastName}";
@@ -56,27 +54,38 @@ namespace RentACloth.Controllers
 
             var createOrderViewModel = new CreateOrderViewModel
             {
-                OrderAddressesViewModel = viewModel.Addresses.ToList(),
+                OrderAddressesViewModel = viewModel.ToList(),
                 FullName = fullName,
                 PhoneNumber = user.PhoneNumber
             };
 
-            return this.View(createOrderViewModel);
+            return this.View();
         }
 
         [Authorize]
         [HttpPost]
         public IActionResult Create(CreateOrderViewModel model)
         {
-            var order = this.orderService.GetOrderByUsername(this.User.Identity.Name);
-            if (order == null)
+            if (this.ModelState.IsValid)
             {
-                return this.RedirectToAction("Index", "ShoppingBag");
-            }
-            
-            this.orderService.SetOrder(order, model.FullName, model.PhoneNumber, model.DeliveryAddressId.Value);
+                var order = this.orderService.GetOrderByUsername(this.User.Identity.Name);
+                if (order == null)
+                {
+                    return this.RedirectToAction("Index", "ShoppingBag");
+                }
 
-            return this.RedirectToAction(nameof(Confirm));
+                this.orderService.SetOrder(order, model.FullName, model.PhoneNumber, model.DeliveryAddressId.Value);
+
+                return this.RedirectToAction(nameof(Confirm));
+            }
+            else
+            {
+                var addresses = this.adressesService.GetAllAddressByUser(this.User.Identity.Name);
+                var addressesViewModel = Mapper.Map<IList<OrdersAddressViewModel>>(addresses);
+
+                model.OrderAddressesViewModel = addressesViewModel.ToList();
+                return this.View(model);
+            }
         }
 
         public IActionResult Confirm()
@@ -114,14 +123,14 @@ namespace RentACloth.Controllers
             this.orderService.CompleteOrder(this.User.Identity.Name);
 
             //TODO:
-            return this.RedirectToAction("Index","Home");
+            return this.RedirectToAction("Index", "Home");
         }
 
         [Authorize]
         public IActionResult MyOrders()
         {
 
-            var orders = this.orderProductRepository.All().Where(x=>x.Order.User.UserName==this.User.Identity.Name).Select(x => new MyOrderViewModel()
+            var orders = this.orderProductRepository.All().Where(x => x.Order.User.UserName == this.User.Identity.Name).Select(x => new MyOrderViewModel()
             {
                 Id = x.OrderId,
                 Quantity = x.ProductQuantity,
@@ -132,7 +141,7 @@ namespace RentACloth.Controllers
             });
 
 
-            var viewModel = new MyOrdersViewModel() {Orders = orders};
+            var viewModel = new MyOrdersViewModel() { Orders = orders };
 
             return this.View(viewModel);
         }

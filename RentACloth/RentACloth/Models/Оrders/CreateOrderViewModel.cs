@@ -6,8 +6,8 @@ namespace RentACloth.Models.Оrders
 {
     public class CreateOrderViewModel
     {
-        public List<IndexAddressViewModel> OrderAddressesViewModel { get; set; }
-        public IndexAddressViewModel OrderAdressViewModel { get; set; }
+        public List<OrdersAddressViewModel> OrderAddressesViewModel { get; set; }
+        public OrdersAddressViewModel OrderAdressViewModel { get; set; }
 
         [Display(Name = "Адрес на получаване")]
         [Required(ErrorMessage = "Моля изберете \"{0}\".")]

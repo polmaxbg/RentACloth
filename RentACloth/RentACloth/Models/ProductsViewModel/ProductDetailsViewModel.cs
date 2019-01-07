@@ -18,6 +18,7 @@ namespace RentACloth.Models.ProductsViewModel
         public string BrandName { get; set; }
         public string Size { get; set; }
         public string CategoryName { get; set; }
+        public string ImageUrl { get; set; }
 
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {

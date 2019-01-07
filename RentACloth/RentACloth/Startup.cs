@@ -11,14 +11,17 @@ using RentACloth.Common;
 using RentACloth.Controllers;
 using RentACloth.Data;
 using RentACloth.Data.Models;
-using RentACloth.MappingConfiguration;
 using RentACloth.Middlewares;
+using RentACloth.Models.Home;
 using RentACloth.Models.ProductsViewModel;
+using RentACloth.Models.ShoppingBag;
+using RentACloth.Models.Оrders;
 using RentACloth.Services;
 using RentACloth.Services.Contracts;
 using RentACloth.Services.Mapping;
 using RentACloth.Services.Models.Addresses;
 using RentACloth.Services.Models.Home;
+using IndexViewModel = RentACloth.Models.Home.IndexViewModel;
 
 namespace RentACloth
 {
@@ -41,7 +44,13 @@ namespace RentACloth
                 typeof(CategoryViewModel).Assembly,
                 typeof(EditChildCategoryViewModel).Assembly,
                 typeof(AllChildCategoryViewModel).Assembly,
-                typeof(EditProductViewModel).Assembly
+                typeof(EditProductViewModel).Assembly,
+                typeof(IndexCategoryViewModel).Assembly,
+                typeof(IndexChildCategoryViewModel).Assembly,
+                typeof(IndexViewModel).Assembly,
+                typeof(ShoppingBagProductsViewModel).Assembly,
+                typeof(OrdersAddressViewModel).Assembly
+
              );
 
             services.Configure<CookiePolicyOptions>(options =>
@@ -133,7 +142,6 @@ namespace RentACloth
                     name: "areas",
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                     );
-                    
 
                 routes.MapRoute(
                     name: "default",

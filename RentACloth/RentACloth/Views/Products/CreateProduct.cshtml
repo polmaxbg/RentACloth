@@ -1,12 +1,14 @@
 ﻿@model RentACloth.Controllers.CreateProductViewModel
 
 @{
-    ViewData["Title"] = "AllAccessories";
+    ViewData["Title"] = "Създаване на продукт";
+    Layout = "_LayoutClear";
+
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="mobile-fondsize-20 h2 mt-5 text-center text-info">@ViewData["Title"]</div>
 <hr />
-<div class="row">
+<div class="row mt-2 d-flex justify-content-center">
     <div class="col-md-4">
         <form asp-controller="Products" asp-action="CreateProduct" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -14,6 +16,11 @@
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
@@ -49,13 +56,8 @@
                 <label asp-for="ChildCategoryId" class="control-label"></label>
                 <select asp-for="ChildCategoryId" class="form-control" asp-items="@Model.ChildCategories"></select>
             </div>
-            @*<div class="form-group">
-            <label asp-for="FormImages" class="control-label"></label>
-            <input asp-for="FormImages" class="form-control" multiple />
-            <span asp-validation-for="FormImages" class="text-danger"></span>
-        </div>*@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Създай" class="btn btn-primary" />
             </div>
         </form>
     </div>

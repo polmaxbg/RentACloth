@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using RentACloth.Data.Models;
 using RentACloth.Data.Models.Entities;
 using RentACloth.Services.Mapping;
 
@@ -6,7 +7,7 @@ namespace RentACloth.Services.Models.Home
 {
     public class IndexProductViewModel:IMapFrom<Shoe>,IMapTo<Shoe>,
         IMapFrom<Cloth>,IMapTo<Cloth>, IMapFrom<Accessories>, IMapTo<Accessories>,
-        IMapFrom<Watch>, IMapTo<Watch>, IHaveCustomMappings
+        IMapFrom<Watch>, IMapTo<Watch>,IMapTo<Product>,IMapFrom<Product>, IHaveCustomMappings
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,6 +16,8 @@ namespace RentACloth.Services.Models.Home
         public string EvenType { get; set; }
         public string CategoryName { get; set; }
         public string Size { get; set; }
+
+        public string ImageUrl { get; set; }
 
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {
@@ -41,12 +44,8 @@ namespace RentACloth.Services.Models.Home
                 //.ForMember(x => x.CategoryName, x => x.MapFrom(y => y.ChildCategory.Product.Name))
                 .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
 
-
-            //configuration.CreateMap<Shoe, IndexProductViewModel>()
-            //    .ForMember(x => x.ShoeSize, x => x.MapFrom(y => y.Size));
-
-            //configuration.CreateMap<Cloth, IndexProductViewModel>()
-            //    .ForMember(x => x.Size, x => x.MapFrom(y => y.Size));
+            configuration.CreateMap<Product, IndexProductViewModel>()
+                .ForMember(x => x.ImageUrl, x => x.MapFrom(y => y.ImageUrl));
         }
     }
 }

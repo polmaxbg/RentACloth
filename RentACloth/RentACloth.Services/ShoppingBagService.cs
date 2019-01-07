@@ -43,7 +43,7 @@ namespace RentACloth.Services
 
             var shoppingBagProduct = GetShoppingBagProduct(productId, user.ShoppingBagId);
 
-            if (shoppingBagProduct!=null)
+            if (shoppingBagProduct != null)
             {
                 return;
             }

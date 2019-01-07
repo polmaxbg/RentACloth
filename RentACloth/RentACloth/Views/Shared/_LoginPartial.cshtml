@@ -1,4 +1,5 @@
 @using Microsoft.AspNetCore.Identity
+@using RentACloth.Components
 @using RentACloth.Data.Models
 
 @inject SignInManager<RentAClothUser> SignInManager
@@ -16,11 +17,13 @@
             </li>
         </ul>
     </form>
+    @await Component.InvokeAsync(typeof(ShoppingBagComponent))
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a asp-area="Identity" asp-page="/Account/Register"class="nav-link">Register</a></li>
-        <li class="nav-item"> <a asp-area="Identity" asp-page="/Account/Login"class="nav-link">Login</a></li>
+        <li class="nav-item"><a asp-area="Identity" asp-page="/Account/Register" class="nav-link">Register</a></li>
+        <li class="nav-item"> <a asp-area="Identity" asp-page="/Account/Login" class="nav-link">Login</a></li>
     </ul>
 }
+

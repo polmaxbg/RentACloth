@@ -9,8 +9,8 @@ namespace RentACloth.Data.Models
         public string City { get; set; }
         public string Street { get; set; }
         public string Country { get; set; }
-        public int RentAClothUserId { get; set; }
-        public RentAClothUser RentAClothUser { get; set; }
+        public string RentAClothUserId { get; set; }
+        public virtual RentAClothUser RentAClothUser { get; set; }
         public ICollection<Order> Addresses { get; set; } = new List<Order>();
     }
 }

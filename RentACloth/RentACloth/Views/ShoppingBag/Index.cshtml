@@ -1,9 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Моята количка";
+    Layout = "_LayoutClear";
 }
 @model IEnumerable<RentACloth.Models.ShoppingBag.ShoppingBagProductsViewModel>
-<div class="mobile-fondsize-20 h2">@ViewData["Title"]</div>
-<div class="row">
+<div class="mobile-fondsize-20 h2 mt-3 text-center text-info">@ViewData["Title"]</div>
+<div class="row mt-5">
     <div class="col-lg-8">
         <div class="container mobile-fondsize-11">
             <table class="table table-hover">
@@ -22,19 +23,19 @@
                     {
                         <tr class="row">
                             <td class="col-2 d-flex justify-content-center">
-                                <img src="http://dhb3yazwboecu.cloudfront.net/1045/Zapatillas-Emporio-Armani-shoes-Azul-y-Blanco_l.jpg" width="50" height="50">
+                                <img src="@product.ImageUrl" width="50" height="50">
                             </td>
                             <td class="col-4 d-flex justify-content-center">
                                 @product.Name
                             </td>
                             <td class="col-1 d-flex justify-content-center">
-                                <a class="text-danger" asp-controller="ShoppingBag" asp-action="Delete" asp-route-id="@product.Id"><i class="fas fa-times-circle"></i></a>
+                                <a class="text-danger" asp-controller="ShoppingBag" asp-action="Delete" asp-route-id="@product.Id"><i class="fa fa-times-circle"></i></a>
                             </td>
                             <td class="col-2 d-flex justify-content-center">@product.Price</td>
                             <td class="col-1 d-flex justify-content-center">
-                                <a class="text-danger pr-2" asp-controller="ShoppingBag" asp-action="Edit" asp-route-id="@product.Id" asp-route-quantity="@(product.Quantity - 1)"><i class="fas fa-minus-circle"> </i> </a>
+                                <a class="text-danger pr-2" asp-controller="ShoppingBag" asp-action="Edit" asp-route-id="@product.Id" asp-route-quantity="@(product.Quantity - 1)"><i class="fa fa-minus-circle"> </i> </a>
                                 @product.Quantity
-                                <a class="text-danger pl-2" asp-controller="ShoppingBag" asp-action="Edit" asp-route-id="@product.Id" asp-route-quantity="@(product.Quantity + 1)"><i class="fas fa-plus-circle"> </i> </a>
+                                <a class="text-danger pl-2" asp-controller="ShoppingBag" asp-action="Edit" asp-route-id="@product.Id" asp-route-quantity="@(product.Quantity + 1)"><i class="fa fa-plus-circle"> </i> </a>
                             </td>
                             <td class="col-2 d-flex justify-content-center">@product.TotalPrice</td>
                         </tr>

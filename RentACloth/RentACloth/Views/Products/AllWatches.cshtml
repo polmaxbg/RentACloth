@@ -1,7 +1,10 @@
-﻿@model RentACloth.Services.Models.Home.IndexViewModel
+﻿@model RentACloth.Models.Home.IndexViewModel
+
 
 @{
     ViewData["Title"] = "AllWatches";
+    Layout = "_LayoutClear";
+
 }
 
 <h2>All Watches</h2>
@@ -20,15 +23,15 @@
             {
                 var index = i + 1;
                 var product = Model.Products.ToList()[i];
-        <tr>
-            <td>@index</td>
-            <td>@product.Name</td>
-            <td>@product.BrandName</td>
-            <td>@product.Price</td>
-            <td>@product.EvenType</td>
-            <td>@product.CategoryName</td>
-            <th><a asp-area="" asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">Details</a></th>
-        </tr>
+                <tr>
+                    <td>@index</td>
+                    <td>@product.Name</td>
+                    <td>@product.BrandName</td>
+                    <td>@product.Price</td>
+                    <td>@product.EvenType</td>
+                    <td>@product.CategoryName</td>
+                    <th><a asp-area="" asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">Details</a></th>
+                </tr>
             }
         }
     </table>
