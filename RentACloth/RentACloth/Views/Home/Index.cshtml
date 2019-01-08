@@ -4,8 +4,6 @@
 
 }
 
-
-
 <hr />
 <div class="row">
     @foreach (var product in Model.ProductViewModel)
@@ -24,7 +22,7 @@
                     <p class="list-group-item text-center font-weight-bold text-danger h5 border-0">@product.Price лв.</p>
                 </div>
                 <div class="card-footer border-0 text-center">
-                    <a asp-controller="ShoppingBag" asp-action="Add" asp-route-id="@product.Id" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart"></i> Добави</a>
+                    <a asp-controller="ShoppingBag" asp-action="Add" asp-route-id="@product.Id" class="btn btn-info btn-md"><i class="fa fa-shopping-cart"></i> Добави</a>
                 </div>
             </div>
         </div>

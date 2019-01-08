@@ -6,19 +6,19 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
         @*<li class="nav-item active">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
-        </li>*@
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+            </li>*@
         @*<li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllClothes" class="nav-link">Дрехи</a></li>
-        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
-        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>*@
+            <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllAccessories" class="nav-link">Аксесоари</a></li>
+            <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="AllWatches" class="nav-link">Часовници</a></li>*@
         @if (User.Identity.IsAuthenticated)
         {
             <li class="nav-item"><a asp-area="" asp-controller="Orders" asp-action="MyOrders" class="nav-link">Моите поръчки</a></li>
             if (User.IsInRole("Admin"))
             {
                 @*<li class="nav-item">
-                    <a class="nav-link text-white" asp-area="Administration" asp-controller="Home" asp-action="Index"> Administration</a>
-                </li>*@
+                        <a class="nav-link text-white" asp-area="Administration" asp-controller="Home" asp-action="Index"> Administration</a>
+                    </li>*@
                 <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="All" class="nav-link">Всички продукти</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,9 +29,13 @@
                         <a asp-controller="ChildCategory" asp-action="All" class="dropdown-item nav-link text-dark">Под категории</a>
                     </div>
                 </li>
-                
+
             }
         }
     </ul>
+    @if (this.User.Identity.IsAuthenticated)
+    {
+        @await Component.InvokeAsync(typeof(ShoppingBagComponent))
+    }
     <partial name="_LoginPartial" />
 </div>

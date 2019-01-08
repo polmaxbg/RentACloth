@@ -90,7 +90,7 @@ using RentACloth.Web.Areas.Identity;
                 <th scope=""col"" class=""col-lg-3 d-flex justify-content-center""><p>");
             EndContext();
             BeginContext(838, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1efabc8bf8374f3582a222b479169a13", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "411017fb87f14e268b7f207f528dd0cf", async() => {
                 BeginContext(913, 25, true);
                 WriteLiteral("Създай новa под категория");
                 EndContext();
@@ -173,7 +173,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("</td>\r\n                    <td class=\"col-lg-3 d-flex justify-content-around\">\r\n                        ");
             EndContext();
             BeginContext(1688, 115, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0ddbc43dbac545e9bcbb2467c195b1e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c81ee67395124f0a96765e733dee6ebf", async() => {
                 BeginContext(1792, 7, true);
                 WriteLiteral("Промени");
                 EndContext();
@@ -211,7 +211,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1829, 115, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "079024dbb99e4f48a9a3e17809728286", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "285f5b49b63642cfadecb6b8269c83e9", async() => {
                 BeginContext(1934, 6, true);
                 WriteLiteral("Изтрий");
                 EndContext();
