@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Services", "Rent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACloth.Common", "RentACloth.Common\RentACloth.Common.csproj", "{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACloth.Services.Tests", "RentACloth.Services.Tests\RentACloth.Services.Tests.csproj", "{C135AFE0-F037-4450-8E8A-641E5FF9FBA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C6432D-ACA1-4B2E-8786-281454ACB2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C135AFE0-F037-4450-8E8A-641E5FF9FBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C135AFE0-F037-4450-8E8A-641E5FF9FBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C135AFE0-F037-4450-8E8A-641E5FF9FBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C135AFE0-F037-4450-8E8A-641E5FF9FBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,7 +49,8 @@ namespace RentACloth.Services
 
             if (category == null)
             {
-                throw new InvalidOperationException("There is no category with this id");
+                //throw new InvalidOperationException("There is no category with this id");
+                return false;
             }
 
             category.Name = name;

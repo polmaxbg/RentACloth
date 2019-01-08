@@ -69,7 +69,7 @@ using RentACloth.Components;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(30, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c35293e29759499f8ad1f4bdf5b5010a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf0741dafb8b4f5c843862181faa0a11", async() => {
                 BeginContext(107, 12, true);
                 WriteLiteral("Rent A Cloth");
                 EndContext();
@@ -111,7 +111,7 @@ using RentACloth.Components;
             WriteLiteral("            <li class=\"nav-item\">");
             EndContext();
             BeginContext(1124, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ad16dfb99d14dfb8c08140ce2affe8e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "088c80b17b0a4a87bb7862e56e48b786", async() => {
                 BeginContext(1202, 13, true);
                 WriteLiteral("Моите поръчки");
                 EndContext();
@@ -148,7 +148,7 @@ using RentACloth.Components;
             WriteLiteral("                <li class=\"nav-item\">");
             EndContext();
             BeginContext(1532, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3663938911b7454dbe3cc3bab5c313a8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08a7c193974e46b3b06a7bdcd58c62ec", async() => {
                 BeginContext(1607, 15, true);
                 WriteLiteral("Всички продукти");
                 EndContext();
@@ -181,7 +181,7 @@ using RentACloth.Components;
                         ");
             EndContext();
             BeginContext(2015, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3cf182c5d14b4794b5cc5ad084964688", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed8fca25fc5d459584b1ce263f7b8484", async() => {
                 BeginContext(2102, 17, true);
                 WriteLiteral("Основни категории");
                 EndContext();
@@ -206,7 +206,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(2149, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2eeb3517c0e40c8b6fa597d22a7655b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f90efdcdaf74a129c05da19e369af4a", async() => {
                 BeginContext(2241, 13, true);
                 WriteLiteral("Под категории");
                 EndContext();
@@ -264,7 +264,7 @@ using RentACloth.Components;
             WriteLiteral("    ");
             EndContext();
             BeginContext(2482, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "80b2de02475343258d900f961600be9d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4225f355813d4d3188ca71fb70c003ec", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
