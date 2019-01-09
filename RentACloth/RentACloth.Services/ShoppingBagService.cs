@@ -66,7 +66,7 @@ namespace RentACloth.Services
             var product = this.productService.GetProduct(productId);
             var user = this.userService.GetUserByUsername(username);
 
-            if (product == null || user == null)
+            if (product == null || user == null || quantity<=0)
             {
                 return;
             }
