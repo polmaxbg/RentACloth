@@ -125,7 +125,7 @@ WriteAttributeValue("", 1342, product.ImageUrl, 1342, 17, false);
             WriteLiteral("\r\n                            </td>\r\n                            <td class=\"col-1 d-flex justify-content-center\">\r\n                                ");
             EndContext();
             BeginContext(1691, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be72631cf47042dab4a8034f6eaa4520", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58585485c21546bb90902e91005cde04", async() => {
                 BeginContext(1790, 34, true);
                 WriteLiteral("<i class=\"fa fa-times-circle\"></i>");
                 EndContext();
@@ -173,7 +173,7 @@ WriteAttributeValue("", 1342, product.ImageUrl, 1342, 17, false);
             WriteLiteral("</td>\r\n                            <td class=\"col-1 d-flex justify-content-center\">\r\n                                ");
             EndContext();
             BeginContext(2072, 187, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d8f875c9c834e4b90c5ba48f7039634", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f6ca9ff68304e3aa36b3d4b560f52b3", async() => {
                 BeginContext(2219, 36, true);
                 WriteLiteral("<i class=\"fa fa-minus-circle\"> </i> ");
                 EndContext();
@@ -230,7 +230,7 @@ WriteAttributeValue("", 1342, product.ImageUrl, 1342, 17, false);
             WriteLiteral("\r\n                                ");
             EndContext();
             BeginContext(2344, 186, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "227847632b51436ea097319682f9c294", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e17a3d7e05b49d780e0d62cadd9965d", async() => {
                 BeginContext(2491, 35, true);
                 WriteLiteral("<i class=\"fa fa-plus-circle\"> </i> ");
                 EndContext();
@@ -315,7 +315,7 @@ WriteAttributeValue("", 1342, product.ImageUrl, 1342, 17, false);
             WriteLiteral(" лв.</p>\r\n            <div class=\"mb-2 \">\r\n                ");
             EndContext();
             BeginContext(3246, 117, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1abe2eb8778441f86bc903386d10441", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "baf9ee5472ce42088ecefb288b07c9bf", async() => {
                 BeginContext(3350, 9, true);
                 WriteLiteral(" Продължи");
                 EndContext();

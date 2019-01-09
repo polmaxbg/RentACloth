@@ -68,7 +68,7 @@ using RentACloth.Web.Areas.Identity;
                     ");
             EndContext();
             BeginContext(525, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0c8636db9fb40b4a31224e26b1ca35a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f57ca6cf1ad0442e81e2827c09a9fd67", async() => {
                 BeginContext(612, 17, true);
                 WriteLiteral("Основни категории");
                 EndContext();
@@ -93,7 +93,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(655, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6814afc184a4450f95956ee0ef044dfc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "226317818c074959be2a81cf7a88c878", async() => {
                 BeginContext(747, 13, true);
                 WriteLiteral("Под категории");
                 EndContext();
@@ -126,7 +126,7 @@ using RentACloth.Web.Areas.Identity;
                     ");
             EndContext();
             BeginContext(1178, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "906fdab7a4bb487ea09fcdcda0453503", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93446a51f7774e0486f573b8a79f64b9", async() => {
                 BeginContext(1256, 6, true);
                 WriteLiteral("Oбувки");
                 EndContext();
@@ -151,7 +151,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1288, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca8e9a42acdf47aabbd33d5a94f32404", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "185d367294b64acea6db35fb771924ab", async() => {
                 BeginContext(1366, 5, true);
                 WriteLiteral("Дрехи");
                 EndContext();
@@ -176,7 +176,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1397, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "308c92f2a4614a388a2a7545b6db8165", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0da5142539e84943b212bd065b0523e7", async() => {
                 BeginContext(1475, 9, true);
                 WriteLiteral("Часовници");
                 EndContext();
@@ -201,7 +201,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1510, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8c1bbec47064dfea2cfda4fc7c61678", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2ddcdbbf3064f4ea329358c6cff543a", async() => {
                 BeginContext(1588, 9, true);
                 WriteLiteral("Аксесоари");
                 EndContext();

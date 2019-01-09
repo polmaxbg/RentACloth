@@ -178,7 +178,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
                                             ");
             EndContext();
             BeginContext(2536, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b925142286154bf99c74ca06c6c11ed5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab165a99c59740138f813fa6167a3a04", async() => {
                 BeginContext(2580, 2, true);
                 WriteLiteral("37");
                 EndContext();
@@ -201,7 +201,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2637, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5bb47bf613f647bd8de74f77fed64e99", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2398dcdd3ad247cf853663963cc88bd5", async() => {
                 BeginContext(2681, 2, true);
                 WriteLiteral("38");
                 EndContext();
@@ -224,7 +224,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2738, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f11486c1365d46f48e0508d6d3aab417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f4eb774ff456462789c570476c0d9d72", async() => {
                 BeginContext(2782, 2, true);
                 WriteLiteral("39");
                 EndContext();
@@ -247,7 +247,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2839, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43a15ea7235443dcb912529702e30104", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f357a9affd7947da92f99e1a992c8d0f", async() => {
                 BeginContext(2883, 2, true);
                 WriteLiteral("40");
                 EndContext();
@@ -270,7 +270,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2940, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c64f868fb6254be688b215287af82da1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b458158fa64465c9be6db61be78d565", async() => {
                 BeginContext(2984, 2, true);
                 WriteLiteral("41");
                 EndContext();
@@ -293,7 +293,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(3041, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d803ed51fe1c4956b05c6997efd6b342", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6cdfb3ce69e1456db97c286f5a4aeae2", async() => {
                 BeginContext(3085, 2, true);
                 WriteLiteral("42");
                 EndContext();
@@ -346,7 +346,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("                            </dd>\r\n                        </dl>  <!-- item-property .// -->\r\n                    </div> <!-- col.// -->\r\n                </div> <!-- row.// -->\r\n                <hr>\r\n                ");
             EndContext();
             BeginContext(4660, 171, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30ee28a0f6284f69a3c509e23c704971", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "858418f515844a348a22078128722365", async() => {
                 BeginContext(4780, 47, true);
                 WriteLiteral("<i class=\"fa fa-credit-card\"></i> Rent A Cloth ");
                 EndContext();
@@ -384,7 +384,7 @@ WriteAttributeValue("", 498, Model.ImageUrl, 498, 15, false);
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(4849, 181, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b37d1f4c746848bb9cf33b722f011d46", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53009605b7534e4cb8c8e111cf28bfc3", async() => {
                 BeginContext(4977, 49, true);
                 WriteLiteral(" <i class=\"fa fa-shopping-cart\"></i> Add to cart ");
                 EndContext();

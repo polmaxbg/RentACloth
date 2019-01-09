@@ -142,7 +142,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n\r\n        <div class=\"text-center mt-4\">\r\n            ");
             EndContext();
             BeginContext(1132, 141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f22b1eed088140ceab04578b093dc2eb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31a2c2f90a314b82ad64c29e888ac022", async() => {
                 BeginContext(1223, 46, true);
                 WriteLiteral("<i class=\"fa fa-check\"></i> Потвърди поръчката");
                 EndContext();
