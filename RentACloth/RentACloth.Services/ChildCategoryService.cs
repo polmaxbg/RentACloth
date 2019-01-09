@@ -54,7 +54,8 @@ namespace RentACloth.Services
             var childCategory = this.childCategoryRepository.All().FirstOrDefault(x => x.Id == id);
             if (childCategory==null)
             {
-                throw new InvalidOperationException("There is no category with this id");
+                //throw new InvalidOperationException("There is no category with this id");
+                return false;
             }
 
             childCategory.Name = name;
