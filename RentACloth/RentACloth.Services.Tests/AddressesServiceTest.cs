@@ -9,6 +9,7 @@ using Xunit;
 
 namespace RentACloth.Services.Tests
 {
+    [Collection("Test")]
     public class AddressesServiceTest
     {
         [Fact]

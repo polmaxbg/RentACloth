@@ -11,6 +11,8 @@ using Xunit;
 
 namespace RentACloth.Services.Tests
 {
+    [Collection("Test")]
+
     public class ShoppingBagServiceTest
     {
         [Fact]
@@ -112,7 +114,7 @@ namespace RentACloth.Services.Tests
         public void AddProductWithSameProductInShoppingBagShouldDoNothing()
         {
             var options = new DbContextOptionsBuilder<RentAClothContext>()
-                .UseInMemoryDatabase(databaseName: "AddSameProductInShoppingBag_ShoppingBag_Database")
+                .UseInMemoryDatabase(databaseName: "AddSameProductInShoppingBag_Shopping_Database").EnableSensitiveDataLogging()
                 .Options;
             var dbContext = new RentAClothContext(options);
             var repository = new DbRepository<ShoppingBag>(dbContext);
