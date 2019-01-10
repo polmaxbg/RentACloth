@@ -13,14 +13,19 @@
 
     <title>@ViewData["Title"] - RentACloth</title>
 
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
     <!-- Bootstrap core CSS -->
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="~/css/shop-homepage.css" rel="stylesheet">
     <link href="~/css/login.css" rel="stylesheet">
+    <link href="~/css/footer-distributed.css" rel="stylesheet">
+
+    <link href="~/css/footer-distributed-with-address-and-phones.css" rel="stylesheet">
+    <link href="~/css/details.css" rel="stylesheet">
+    <link href="~/css/shoppingBag.css" rel="stylesheet">
+    <link href="~/css/titleStyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,28 +34,24 @@
         <div class="container">
             <partial name="_NavbarPartial.cshtml" />
             @*@if (User.IsInRole("Admin"))
-            {
-                <partial name="_NavbarAdminPartial.cshtml" />
-            }*@
+                {
+                    <partial name="_NavbarAdminPartial.cshtml" />
+                }*@
         </div>
     </nav>
     <!-- Page Content -->
     <main>
-        <div class="container">
-            @RenderBody()
+        <div class="row mt-5">
+            <div class="col-lg-12 mt-5">
+                @RenderBody()
+            </div>
         </div>
     </main>
-<!-- /.container -->
-
-
-
-<!-- Footer -->
+    <!-- /.container -->
+    <!-- Footer -->
     <hr />
-    <footer class="py-2 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-        </div>
-        <!-- /.container -->
+    <footer class="footer-distributed mt-5">
+        <partial name="_FooterPartial.cshtml" />
     </footer>
 
     <!-- Bootstrap core JavaScript -->

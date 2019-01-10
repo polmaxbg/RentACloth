@@ -2,37 +2,51 @@
 
 
 @{
-    ViewData["Title"] = "AllWatches";
+    ViewData["Title"] = "Всички часовници";
     Layout = "_LayoutClear";
 
 }
 
-<h2>All Watches</h2>
-<div class="mx-auto w-50">
-    <table class="table-hover table table-striped">
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Brand Name</th>
-            <th>Price</th>
-            <th>Event Type</th>
-            <th>CategoryName</th>
-        </tr>
-        @for (int i = 0; i < Model.Products.Count(); i++)
-        {
+<div class="mobile-fondsize-20 h2 mt-4 text-center text-info">@ViewData["Title"]</div>
+<hr />
+
+<div class="container mobile-fondsize-11 mt-5 d-flex justify-content-center">
+    <table class="table table-hover ">
+        <thead>
+            <tr class="row">
+                <th scope="col" class="col-3 d-flex justify-content-center">Име</th>
+                <th scope="col" class="col-1 d-flex justify-content-center">Цена</th>
+                <th scope="col" class="col-2 d-flex justify-content-center">Марка</th>
+                <th scope="col" class="col-2 d-flex justify-content-center">Име на категория</th>
+                <th scope="col" class="col-3 d-flex justify-content-center"><p><a asp-action="CreateProduct" class="btn btn-success">Създай нов продукт</a></p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
             {
-                var index = i + 1;
-                var product = Model.Products.ToList()[i];
-                <tr>
-                    <td>@index</td>
-                    <td>@product.Name</td>
-                    <td>@product.BrandName</td>
-                    <td>@product.Price</td>
-                    <td>@product.EvenType</td>
-                    <td>@product.CategoryName</td>
-                    <th><a asp-area="" asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">Details</a></th>
+                <tr class="row">
+                    <td class="col-3 d-flex justify-content-center">
+                        @product.Name
+                    </td>
+                    <td class="col-1 d-flex justify-content-center">
+                        @product.Price
+                    </td>
+                    <td class="col-2 d-flex justify-content-center">
+                        @product.BrandName
+                    </td>
+                    <td class="col-2 d-flex justify-content-center">
+                        @product.CategoryName
+                    </td>
+                    <td class="col-md-3 d-flex justify-content-around">
+                        <div class="mr-2">
+                            <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-primary btn-sm mobile-fondsize-11">Промени</a>
+                        </div>
+                        <div>
+                            <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger btn-sm">Изтрий</a>
+                        </div>
+                    </td>
                 </tr>
             }
-        }
+        </tbody>
     </table>
 </div>

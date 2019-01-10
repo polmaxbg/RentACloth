@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -8,11 +7,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RentACloth.Data.Models;
-using RentACloth.Data.Models.Entities;
 using RentACloth.Models.Home;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Services.Contracts;
-using RentACloth.Services.Mapping;
 using RentACloth.Services.Models.Home;
 
 namespace RentACloth.Controllers
@@ -177,66 +174,12 @@ namespace RentACloth.Controllers
 
             this.productService.EditProduct(product);
 
-            //if (model.FormImages != null)
-            //{
-            //    int existingImages = productService.GetImages(product.Id).Count();
-            //    var imageUrls = await this.imageService.UploadImages(model.FormImages.ToList(), existingImages,
-            //        GlobalConstans.PRODUCT_PATH_TEMPLATE, product.Id);
-
-            //    this.productService.AddImageUrls(product.Id, imageUrls);
-            //}
-
             return RedirectToAction(nameof(All));
         }
         public IActionResult Delete(int id)
         {
             this.productService.RemoveProduct(id);
             return this.RedirectToAction(nameof(All));
-        }
-    }
-
-    public class EditProductViewModel : IMapFrom<Product>, IMapTo<Product>, IHaveCustomMappings
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Description { get; set; }
-        public string Size { get; set; }
-        public string ProductType { get; set; }
-        public string EventType { get; set; }
-        public int ChildCategoryId { get; set; }
-        public string BrandName { get; set; }
-
-        public void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap<Product, EditProductViewModel>()
-                .ForMember(x => x.Name, x => x.MapFrom(y => y.Name))
-                .ForMember(x => x.ProductType, x => x.MapFrom(y => y.ProductType))
-                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x=>x.BrandName,x=>x.MapFrom(y=>y.BrandName));
-        }
-    }
-
-    public class CreateProductViewModel:IMapFrom<Product>,IMapTo<Product>,IMapFrom<Cloth>,IMapTo<Cloth>,IHaveCustomMappings
-    {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Description { get; set; }
-        public string Size { get; set; }
-        public string ProductType { get; set; }
-        public string EventType { get; set; }
-        public string BrandName { get; set; }
-        public string ImageUrl { get; set; }
-
-        public int ChildCategoryId { get; set; }
-        public ICollection<SelectListItem> ChildCategories { get; set; }
-        public void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap<Product, CreateProductViewModel>()
-                .ForMember(x => x.Name, x => x.MapFrom(y => y.Name))
-                .ForMember(x => x.ProductType, x => x.MapFrom(y => y.ProductType))
-                .ForMember(x => x.EventType, x => x.MapFrom(y => y.EventType))
-                .ForMember(x => x.BrandName, x => x.MapFrom(y => y.BrandName));
         }
     }
 }

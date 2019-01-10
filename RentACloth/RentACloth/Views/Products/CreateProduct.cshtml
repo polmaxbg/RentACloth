@@ -1,4 +1,4 @@
-﻿@model RentACloth.Controllers.CreateProductViewModel
+﻿@model RentACloth.Models.ProductsViewModel.CreateProductViewModel
 
 @{
     ViewData["Title"] = "Създаване на продукт";
@@ -48,9 +48,9 @@
                 <span asp-validation-for="BrandName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EventType" class="control-label"></label>
-                <input asp-for="EventType" class="form-control" />
-                <span asp-validation-for="EventType" class="text-danger"></span>
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ChildCategoryId" class="control-label"></label>

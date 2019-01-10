@@ -12,6 +12,8 @@ using RentACloth.Controllers;
 using RentACloth.Data;
 using RentACloth.Data.Models;
 using RentACloth.Middlewares;
+using RentACloth.Models.Categories;
+using RentACloth.Models.ChildCategories;
 using RentACloth.Models.Home;
 using RentACloth.Models.ProductsViewModel;
 using RentACloth.Models.ShoppingBag;
@@ -138,10 +140,6 @@ namespace RentACloth
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "areas",
-                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-                    );
 
                 routes.MapRoute(
                     name: "default",

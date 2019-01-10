@@ -99,6 +99,7 @@
     <link href="~/css/footer-distributed-with-address-and-phones.css" rel="stylesheet">
     <link href="~/css/footer-distributed.css" rel="stylesheet">
     <link href="~/css/shoppingBag.css" rel="stylesheet">
+    <link href="~/css/titleStyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,11 +112,11 @@
     <!-- Page Content -->
     <main>
         <div class="container mt-2">
-            <div class="row mt-2">
+            <div class="row mt-5">
                 <div class="col-lg-3">
                     <partial name="_CategoryPartial.cshtml" />
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 mt-5">
                     <partial name="_MainPicturesPartial.cshtml" />
 
                     @RenderBody()
@@ -126,7 +127,7 @@
     </main>
     <!-- /.container -->
     <!-- Footer -->
-    <footer class="footer-distributed">
+    <footer class="footer-distributed mt-5">
         <partial name="_FooterPartial.cshtml"/>
     </footer>
 

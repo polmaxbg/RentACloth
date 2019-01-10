@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RentACloth.Models.Categories;
 using RentACloth.Services.Contracts;
 
 namespace RentACloth.Controllers

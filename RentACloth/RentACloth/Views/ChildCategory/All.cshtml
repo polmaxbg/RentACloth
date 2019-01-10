@@ -1,5 +1,5 @@
 ﻿
-@model RentACloth.Controllers.AllCategoriesViewModel
+@model RentACloth.Models.Categories.AllCategoriesViewModel
 @{
     ViewData["Title"] = "Под категории";
     Layout = "_LayoutClear";
@@ -7,6 +7,8 @@
 }
 
 <div class="mobile-fondsize-20 h2 mt-3 text-center text-info">@ViewData["Title"]</div>
+<hr />
+<h6 class="text-danger">Може да изтриете под категория само ако не съдържа продукти!</h6>
 <div class="container mt-4">
     <table class="table table-hover">
         <thead>

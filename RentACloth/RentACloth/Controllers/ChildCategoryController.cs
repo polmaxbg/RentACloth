@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -9,8 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RentACloth.Common;
 using RentACloth.Data.Models;
+using RentACloth.Models.Categories;
+using RentACloth.Models.ChildCategories;
 using RentACloth.Services.Contracts;
-using RentACloth.Services.Mapping;
 
 namespace RentACloth.Controllers
 {
@@ -121,67 +121,5 @@ namespace RentACloth.Controllers
 
             return RedirectToAction(nameof(All));
         }
-    }
-
-    public class AllCategoriesViewModel
-    {
-        public ICollection<AllChildCategoryViewModel> ChildCategoryViewModel { get; set; }
-
-        public ICollection<CategoryViewModel> CategoryViewModels { get; set; }
-    }
-
-    public class CategoryViewModel
-    {
-        public int Id { get; set; }
-
-        [Required]
-        public string Name { get; set; }
-
-        public int ChildCategoriesCount { get; set; }
-    }
-
-    public class AllChildCategoryViewModel:IMapFrom<Category>,IMapTo<Category>,IHaveCustomMappings
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string CategoryName { get; set; }
-        public int ProductsCount { get; set; }
-        public void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap<Category, AllChildCategoryViewModel>()
-                .ForMember(x => x.CategoryName, x => x.MapFrom(y => y.Name));
-        }
-    }
-
-    public class AddChildCategoryViewModel
-    {
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "Попълнете {0}!")]
-        [Display(Name = "Име")]
-        public string Name { get; set; }
-
-
-        [Required(ErrorMessage = "Изберете {0}!")]
-        [Display(Name = "Главна категория")]
-        public int? CategoryId { get; set; }
-
-        public ICollection<Category> Categories { get; set; }
-    }
-
-    public class EditChildCategoryViewModel:IMapFrom<ChildCategory>,IMapTo<ChildCategory>
-    {
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "Попълнете {0}!")]
-        [Display(Name = "Име")]
-        public string Name { get; set; }
-        
-
-        [Required(ErrorMessage = "Изберете {0}!")]
-        [Display(Name = "Основна категория")]
-        public int? CategoryId { get; set; }
-
-        public ICollection<Category> Categories { get; set; }
     }
 }

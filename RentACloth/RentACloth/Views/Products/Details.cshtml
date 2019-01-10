@@ -26,7 +26,7 @@
 
                 <p class="price-detail-wrap">
                     <span class="price h3 text-warning">
-                        <span class="currency"></span>Цена: <span class="num">@Model.Price лв.</span>
+                        <span class="currency"></span>Цена: <span class="num">@Model.Price лв. за ден.</span>
                     </span>
                 </p> <!-- price-detail-wrap .// -->
                 <dl class="item-property">
@@ -52,7 +52,7 @@
                         <dl class="param param-inline">
                             <dt>Размер: </dt>
                             <dd>
-                                @if (@Model.CategoryName == "Shoes")
+                                @if (@Model.CategoryName == "Обувки")
                                 {
                                     <label for="inlineRadio2" class="form-check form-check-inline">
                                         <select class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2">
@@ -65,7 +65,7 @@
                                         </select>
                                     </label>
                                 }
-                                else if (@Model.CategoryName == "Clothes")
+                                else if (@Model.CategoryName == "Дрехи")
                                 {
                                     <label class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
