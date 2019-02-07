@@ -75,7 +75,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("        <div class=\"col-md-4 mb-4 h-50 border-0 \">\r\n            <div class=\"card h-100 border-0\">\r\n                ");
             EndContext();
             BeginContext(298, 310, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b74613a7be12445bb288d0f8fdfe26fa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "126b40307ebb4813b6d3951392a2161b", async() => {
                 BeginContext(376, 74, true);
                 WriteLiteral("\r\n                    \r\n                    <img class=\"d-block img-fluid\"");
                 EndContext();
@@ -135,7 +135,7 @@ WriteAttributeValue("", 516, product.Name, 516, 13, false);
             WriteLiteral("\r\n                <div class=\"card-body\">\r\n                    ");
             EndContext();
             BeginContext(671, 157, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d3884450de74331b7b60c558a7138e4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb6f7784e7be40cdbc1e421d3568b96f", async() => {
                 BeginContext(766, 40, true);
                 WriteLiteral("<h4 class=\"card-title font-weight-bold\">");
                 EndContext();
@@ -193,7 +193,7 @@ WriteAttributeValue("", 516, product.Name, 516, 13, false);
             WriteLiteral(" лв.</p>\r\n                </div>\r\n                <div class=\"card-footer border-0 text-center\">\r\n                    ");
             EndContext();
             BeginContext(1090, 150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f103b4d5b648e4ad92bf91cbf7641f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d560b29753c4474abdd3f6d15167041c", async() => {
                 BeginContext(1194, 42, true);
                 WriteLiteral("<i class=\"fa fa-shopping-cart\"></i> Добави");
                 EndContext();

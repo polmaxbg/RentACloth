@@ -84,7 +84,7 @@ using RentACloth.Web.Areas.Identity;
             WriteLiteral("        <li class=\"nav-item bg-light\">\r\n            ");
             EndContext();
             BeginContext(428, 152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27b7177b0da2475783ac4138801f5544", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "617ce651d7b44715956929a019e54a12", async() => {
                 BeginContext(553, 4, true);
                 WriteLiteral("--- ");
                 EndContext();

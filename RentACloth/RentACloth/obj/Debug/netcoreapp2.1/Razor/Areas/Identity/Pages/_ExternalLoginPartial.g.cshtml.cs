@@ -70,7 +70,7 @@ namespace RentACloth.Areas.Identity.Pages
             WriteLiteral("        ");
             EndContext();
             BeginContext(425, 1150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "081cb127ee034a509f2561c0f09a7e5f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "461a13e3c1a04bfd8a7bd2a52faa64ae", async() => {
                 BeginContext(531, 42, true);
                 WriteLiteral("\r\n            <div>\r\n                <p>\r\n");
                 EndContext();

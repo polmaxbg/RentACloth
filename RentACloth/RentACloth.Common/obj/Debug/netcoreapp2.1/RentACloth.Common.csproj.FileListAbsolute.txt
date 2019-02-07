@@ -1,6 +1,7 @@
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\bin\Debug\netcoreapp2.1\RentACloth.Common.deps.json
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\bin\Debug\netcoreapp2.1\RentACloth.Common.dll
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\bin\Debug\netcoreapp2.1\RentACloth.Common.pdb
+C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.csprojAssemblyReference.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.csproj.CoreCompileInputs.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.AssemblyInfoInputs.cache
 C:\Users\Viktor\Desktop\Project\RentACloth\RentACloth.Common\obj\Debug\netcoreapp2.1\RentACloth.Common.AssemblyInfo.cs

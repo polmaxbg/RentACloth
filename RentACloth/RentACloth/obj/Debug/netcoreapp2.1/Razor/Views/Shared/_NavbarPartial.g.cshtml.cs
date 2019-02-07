@@ -73,7 +73,7 @@ using RentACloth.Components;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(30, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f3da28b31ef46d3bb11c0782b774693", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "699e2f46dfb94682b91aceaeba510a11", async() => {
                 BeginContext(113, 25, true);
                 WriteLiteral("Rent A <span>Cloth</span>");
                 EndContext();
@@ -116,7 +116,7 @@ using RentACloth.Components;
             WriteLiteral("            <li class=\"nav-item\">");
             EndContext();
             BeginContext(580, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a0156b9f0c94e5f935384233c9ad876", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbc3a595a0d644419a0ff3daa348c27b", async() => {
                 BeginContext(658, 13, true);
                 WriteLiteral("Моите поръчки");
                 EndContext();
@@ -157,7 +157,7 @@ using RentACloth.Components;
                         ");
             EndContext();
             BeginContext(1121, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c616e5d9a7fe4868a115c1e1ae882094", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0b03eb28cff46559bc63f0049246921", async() => {
                 BeginContext(1220, 15, true);
                 WriteLiteral("Всички продукти");
                 EndContext();
@@ -184,7 +184,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1265, 115, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a12d2acb20541488c90957d5df2ee30", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f76ff64e5664adf9b549cc76b9e868e", async() => {
                 BeginContext(1371, 5, true);
                 WriteLiteral("Дрехи");
                 EndContext();
@@ -211,7 +211,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1406, 114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51b4752186544df4bb288c6e0716ec60", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d667292a8ec4b0d8fc4a37ff377f09e", async() => {
                 BeginContext(1510, 6, true);
                 WriteLiteral("Обувки");
                 EndContext();
@@ -238,7 +238,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1546, 123, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "103d6b9a1ae34d14891e5ff107da594c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b383e2d8a3564ee6938f5427c203c8e3", async() => {
                 BeginContext(1656, 9, true);
                 WriteLiteral("Аксесоари");
                 EndContext();
@@ -265,7 +265,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1695, 119, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "14584e403a954ad4b59aa844baefab4e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68dad910d6a34cc089d0b66c7f4e5d55", async() => {
                 BeginContext(1801, 9, true);
                 WriteLiteral("Часовници");
                 EndContext();
@@ -300,7 +300,7 @@ using RentACloth.Components;
                         ");
             EndContext();
             BeginContext(2249, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8280f829409f4f94bb66ac04ad08b7ba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5800f74267b401e887decb3450adf51", async() => {
                 BeginContext(2336, 17, true);
                 WriteLiteral("Основни категории");
                 EndContext();
@@ -325,7 +325,7 @@ using RentACloth.Components;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(2383, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3da5273af54040ffb99a491e38670f49", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e411126e5644586964f405ef4437ebf", async() => {
                 BeginContext(2475, 13, true);
                 WriteLiteral("Под категории");
                 EndContext();
@@ -360,7 +360,7 @@ using RentACloth.Components;
             WriteLiteral("    </ul>\r\n\r\n    ");
             EndContext();
             BeginContext(2590, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6d6ae08a3bba4c74b733137138e4f9e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "99da6e8c29184ee88c52f7e971057fcf", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
